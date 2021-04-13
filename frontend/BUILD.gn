@@ -1,0 +1,25 @@
+# Copyright 2019 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//src/sys/build/components.gni")
+
+group("frontend") {
+  deps = [ ":fuchsia-monitor-frontend-cpp" ]
+}
+
+executable("bin") {
+  output_name = "fuchsia_monitor_frontend_cpp"
+
+  sources = [ "fuchsia_monitor_frontend.cc" ]
+}
+
+fuchsia_component("component") {
+  component_name = "fuchsia-monitor-frontend-cpp"
+  manifest = "meta/fuchsia_monitor_frontend_cpp.cmx"
+  deps = [ ":bin" ]
+}
+
+fuchsia_package("fuchsia-monitor-frontend-cpp") {
+  deps = [ ":component" ]
+}
