@@ -1,0 +1,12 @@
+{
+    "program": {
+        "data": "data/resource_monitor"
+    },
+    "sandbox": {
+        "services": [
+            "fuchsia.logger.LogSink",
+            "fuchsia.sys.Environment",
+            "fuchsia.sys.Launcher"
+        ]
+    }
+}

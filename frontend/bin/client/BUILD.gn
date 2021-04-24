@@ -1,0 +1,27 @@
+import("//build/dart/dart_component.gni")
+import("//build/dart/dart_library.gni")
+import("//build/dart/fidl_move.gni")
+
+dart_library("lib") {
+  package_name = "resource_monitor"
+  sources = [
+    "main.dart",
+    "src/_resource_monitor_receiver.dart",
+  ]
+  deps = [
+    "//sdk/fidl/fuchsia.sys",
+    "//topaz/examples/resource_mon/fidl",
+    dart_package_label.fidl,
+    dart_package_label.fuchsia,
+    dart_package_label.fuchsia_logger,
+    dart_package_label.fuchsia_services,
+    dart_package_label.fuchsia_vfs,
+    dart_package_label.zircon,
+  ]
+}
+
+dart_component("client") {
+  component_name = "resource_monitor_client"
+  manifest = "meta/resource_monitor_client.cmx"
+  deps = [ ":lib" ]
+}

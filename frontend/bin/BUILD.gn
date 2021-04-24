@@ -1,0 +1,8 @@
+import("//build/dart/fidl_move.gni")
+import("//src/sys/build/components.gni")
+
+fuchsia_package("resource_mon") {
+  deps = [
+    "//topaz/examples/resource_mon/bin/client",
+  ]
+}
