@@ -1,0 +1,37 @@
+# Copyright 2019 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+import("//src/sys/build/components.gni")
+
+# group("backend") {
+#   deps = [ ":fuchsia-monitor-backend-cpp" ]
+# }
+
+executable("bin") {
+  output_name = "fuchsia_monitor_backend_cpp"
+
+  sources = [ "lib/fuchsia_monitor_backend.cc" ]
+  deps = [
+    "//sdk/fidl/fuchsia.logger",
+    "//sdk/lib/sys/cpp",
+    "//sdk/lib/syslog/cpp",
+    "//sdk/lib/syslog/cpp:backend_fuchsia_compat",
+    "//src/lib/fsl",
+    "//zircon/system/ulib/syslog",
+    "//examples/fidl/fuchsia.examples",
+    "//sdk/lib/fidl/cpp",
+    "//zircon/system/ulib/async-loop:async-loop-cpp",
+    "//zircon/system/ulib/async-loop:async-loop-default",
+  ]
+}
+
+fuchsia_component("server") {
+  component_name = "fuchsia-monitor-backend-cpp"
+  manifest = "meta/fuchsia_monitor_backend_cpp.cmx"
+  deps = [ ":bin" ]
+}
+
+# fuchsia_package("fuchsia-monitor-backend-cpp") {
+#   deps = [ ":component" ]
+# }

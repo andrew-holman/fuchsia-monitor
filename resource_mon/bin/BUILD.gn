@@ -1,0 +1,9 @@
+import("//build/dart/fidl_move.gni")
+import("//src/sys/build/components.gni")
+
+fuchsia_package("resource-monitor") {
+  deps = [
+    "//topaz/examples/resource_mon/bin/client",
+    "//topaz/examples/resource_mon/bin/server",
+  ]
+}

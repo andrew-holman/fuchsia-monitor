@@ -1,0 +1,24 @@
+# Copyright 2019 The Fuchsia Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# group("fuchsia_monitor") {
+#   deps = [
+#     "frontend",
+#     "backend",
+#   ]
+# }
+
+
+
+import("//build/cpp/fidl_cpp.gni")
+import("//src/sys/build/components.gni")
+
+fuchsia_package("resource-monitor") {
+  deps = [
+    "//topaz/examples/resource_mon/backend",
+    "//topaz/examples/resource_mon/frontend/bin/client",
+  ]
+}
+
+

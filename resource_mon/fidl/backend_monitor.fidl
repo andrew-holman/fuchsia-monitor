@@ -13,5 +13,5 @@ protocol Backend_Monitor {
 
 [Discoverable]
 protocol ResourceMonitor{
-
+    
 }
