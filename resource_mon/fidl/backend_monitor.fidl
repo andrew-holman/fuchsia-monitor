@@ -2,16 +2,16 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-library fuchsia.examples;
+library fuchsia.services.examples;
 
 [Discoverable]
-protocol Backend_Monitor {
+protocol ResourceMonitor {
     /// Returns the input.
-    MonitorTime(uint64? value) -> (string? response);
+    MonitorTime(int32 value) -> (string response);
 };
 
 
 [Discoverable]
-protocol ResourceMonitor{
+protocol ResourceMonitorFrontend{
     
-}
+};

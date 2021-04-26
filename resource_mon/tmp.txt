@@ -1,0 +1,930 @@
+[00000.000000][0][1025][klog] INFO: printing enabled
+[00000.000000][0][1025][klog] INFO: Data ZBI: @ 0xffffff8001459000 (20270056 bytes)
+[00000.000000][0][1025][klog] INFO: UART: enabled with FIFO depth 16
+[00000.000000][0][1025][klog] INFO: ACPI LITE: Found RSDP at physical address 0xf58f0.
+[00000.000000][0][1025][klog] INFO: ACPI LITE: Found valid RSDT table at physical address 0x7ffe2507
+[00000.000000][0][1025][klog] INFO: PMM: boot reserve add [0x100000, 0x420fff]
+[00000.000000][0][1025][klog] INFO: PMM: boot reserve add [0x1459000, 0x27adfff]
+[00000.000000][0][1025][klog] INFO: PMM: adding arena 0xffffffff0041bf00 name 'memory' base 0x100000 size 0x7fedf000
+[00000.000000][0][1025][klog] INFO: PMM: adding arena 0xffffffff0041bf00 name 'memory' base 0x100000000 size 0x80000000
+[00000.000000][0][1025][klog] INFO: PMM: boot reserve marking WIRED [0x100000, 0x420fff]
+[00000.000000][0][1025][klog] INFO: PMM: boot reserve marking WIRED [0x1459000, 0x27adfff]
+[00000.000000][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff0014d600 (global_prng_seed) at level 0x20001, flags 0x1
+[00000.000000][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff002f9460 (intel_rng_init) at level 0x20001, flags 0x1
+[00000.000000][0][1025][klog] INFO: 
+[00000.000000][0][1025][klog] INFO: welcome to Zircon
+[00000.000000][0][1025][klog] INFO: 
+[00000.000000][0][1025][klog] INFO: KASLR: .text section at 0xffffffff00100000
+[00000.000000][0][1025][klog] INFO: initializing arch pre-vm
+[00000.000000][0][1025][klog] INFO: initializing platform pre-vm
+[00000.000000][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff0025f080 (code_patching) at level 0x40000, flags 0x1
+[00000.000000][0][1025][klog] INFO: initializing vm pre-heap
+[00000.000000][0][1025][klog] INFO: VM: marking boot alloc used range [0x27ae000, 0x27ae180)
+[00000.000000][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff00163940 (elf_build_id) at level 0x5fffe, flags 0x1
+[00000.000000][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff00163d40 (version) at level 0x5ffff, flags 0x1
+[00000.000000][0][1025][klog] INFO: version:
+[00000.000000][0][1025][klog] INFO: 	arch:     x64
+[00000.000000][0][1025][klog] INFO: 	zx_system_get_version_string: git-0ff4feeb33bc8c0aa9d1eb5308eef215df2d562e
+[00000.000000][0][1025][klog] INFO: 	ELF build ID: be35f8edf9845601
+[00000.000000][0][1025][klog] INFO: 	LK_DEBUGLEVEL: 2
+[00000.000000][0][1025][klog] INFO: initializing heap
+[00000.000000][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff00104850 (console) at level 0x60000, flags 0x1
+[00000.000000][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff001e3280 (x86_resource_init) at level 0x60000, flags 0x1
+[00000.000000][0][1025][klog] INFO: initializing vm
+[00000.000000][0][1025][klog] INFO: VM: reserving kernel region [0xffffffff00100000, 0xffffffff002fa000) flags 0x28 name 'kernel_code'
+[00000.000000][0][1025][klog] INFO: VM: reserving kernel region [0xffffffff002fa000, 0xffffffff00379000) flags 0x8 name 'kernel_rodata'
+[00000.000000][0][1025][klog] INFO: VM: reserving kernel region [0xffffffff00379000, 0xffffffff00381000) flags 0x18 name 'kernel_data'
+[00000.000000][0][1025][klog] INFO: VM: reserving kernel region [0xffffffff00381000, 0xffffffff00421000) flags 0x18 name 'kernel_bss'
+[00000.000000][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff0027bda0 (pmm_fill) at level 0x70000, flags 0x1
+[00000.000000][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff001e3e60 (display_memtype) at level 0x70001, flags 0x1
+[00000.000000][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff001e0160 (debug_serial) at level 0x70002, flags 0x1
+[00000.000000][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff001e0760 (hpet) at level 0x70002, flags 0x1
+[00000.000000][0][1025][klog] INFO: HPET: detected at 0xfed00000 ticks per ms 100000 num timers 3
+[00000.000000][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff001e0ca0 (apic) at level 0x70002, flags 0x1
+[00000.000000][0][1025][klog] INFO: x2APIC enabled
+[00000.000000][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff001e8940 (timer) at level 0x70003, flags 0x1
+[00000.000000][0][1025][klog] INFO: pv_clock: Clocksource is stable
+[00000.000000][0][1025][klog] INFO: HPET frequency: 100000 ticks/ms
+[00000.000000][0][1025][klog] INFO: pv_clock: Fetching TSC frequency
+[00000.000000][0][1025][klog] INFO: TSC frequency: 3599998 ticks/ms
+[00000.124616][0][1025][klog] INFO: timer features: constant_tsc 1 invariant_tsc 1 tsc_deadline 1
+[00000.124616][0][1025][klog] INFO: Using TSC as wallclock
+[00000.124617][0][1025][klog] INFO: initializing lockup detector on boot cpu
+[00000.124619][0][1025][klog] INFO: lockup_detector: critical section detection disabled by threshold
+[00000.124620][0][1025][klog] INFO: lockup_detector: heartbeats enabled, period is 1000 ms, threshold is 3000 ms
+[00000.124626][0][1025][klog] INFO: initializing system topology
+[00000.124632][0][1025][klog] INFO: APIC:    0 | Logical:  0 | Package:  0 | Die:  0 | Core:  0 | Thread:  0 | LLC:  0 |
+[00000.124633][0][1025][klog] INFO: APIC:  0x1 | Logical:  1 | Package:  0 | Die:  0 | Core:  0 | Thread:  1 | LLC:  0 |
+[00000.124634][0][1025][klog] INFO: APIC:  0x2 | Logical:  2 | Package:  1 | Die:  0 | Core:  0 | Thread:  0 | LLC:  1 |
+[00000.124635][0][1025][klog] INFO: APIC:  0x3 | Logical:  3 | Package:  1 | Die:  0 | Core:  0 | Thread:  1 | LLC:  1 |
+[00000.124636][0][1025][klog] INFO: System topology: Unable to attach NUMA information, missing ACPI tables.
+[00000.124640][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff001e6320 (pc_traverse_topology) at level 0x80000, flags 0x1
+[00000.124642][0][1025][klog] INFO: cpu topology:
+[00000.124643][0][1025][klog] INFO: 	  0: apic id    0 BSP 
+[00000.124644][0][1025][klog] INFO: 	  1: apic id  0x1 SMT 
+[00000.124645][0][1025][klog] INFO: 	  2: apic id  0x2 
+[00000.124645][0][1025][klog] INFO: 	  3: apic id  0x3 SMT 
+[00000.124646][0][1025][klog] INFO: Found 4 cpus
+[00000.124647][0][1025][klog] INFO: Allocated 6 entries for CPU distance map.
+[00000.124647][0][1025][klog] INFO: CPU distance map:
+[00000.124648][0][1025][klog] INFO: CPU  0: 00:01:02:02
+[00000.124649][0][1025][klog] INFO: CPU  1: 01:00:02:02
+[00000.124650][0][1025][klog] INFO: CPU  2: 02:02:00:01
+[00000.124651][0][1025][klog] INFO: CPU  3: 02:02:01:00
+[00000.124651][0][1025][klog] INFO: initializing kernel
+[00000.124651][0][1025][klog] INFO: initializing mp
+[00000.124653][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff002e0660 (percpu_heap_init) at level 0x90000, flags 0x1
+[00000.124655][0][1025][klog] INFO: CPU performance scales:
+[00000.124657][0][1025][klog] INFO: CPU  0: 1.0
+[00000.124658][0][1025][klog] INFO: CPU  1: 1.0
+[00000.124658][0][1025][klog] INFO: CPU  2: 1.0
+[00000.124658][0][1025][klog] INFO: CPU  3: 1.0
+[00000.124660][0][1025][klog] INFO: CPU clusters:
+[00000.124661][0][1025][klog] INFO: Cluster  0: 0, 1
+[00000.124661][0][1025][klog] INFO: Cluster  1: 2, 3
+[00000.124661][0][1025][klog] INFO: CPU search order:
+[00000.124663][0][1025][klog] INFO: CPU  0:  0,  1,  2,  3
+[00000.124664][0][1025][klog] INFO: CPU  1:  1,  0,  3,  2
+[00000.124665][0][1025][klog] INFO: CPU  2:  2,  3,  0,  1
+[00000.124666][0][1025][klog] INFO: CPU  3:  3,  2,  1,  0
+[00000.124667][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff00165860 (buffer_chain_cache_init) at level 0x90001, flags 0x1
+[00000.124671][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff00191600 (port_observer_cache_init) at level 0x90001, flags 0x1
+[00000.124673][0][1025][klog] INFO: INIT: cpu 0, calling hook 0xffffffff0014dca0 (global_prng_thread_safe) at level 0x9ffff, flags 0x1
+[00000.124674][0][1025][klog] INFO: creating bootstrap completion thread
+[00000.124707][0][1032][klog] INFO: top of bootstrap2()
+[00000.124708][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff0014dce0 (global_prng_reseed) at level 0xa0000, flags 0x1
+[00000.124716][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff0019aca0 (libobject) at level 0xa0000, flags 0x1
+[00000.124730][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff0027c200 (pmm) at level 0xa0000, flags 0x1
+[00000.124737][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff002dbd40 (dpc) at level 0xa0000, flags 0x1
+[00000.124751][0][1032][klog] INFO: Processor Model Info: type 0 family 0x6 model 0xe stepping 0xa
+[00000.124751][0][1032][klog] INFO: 	display_family 0x6 display_model 0x9e
+[00000.124752][0][1032][klog] INFO: 
+[00000.124752][0][1032][klog] INFO: ==== X86 CACHE INFO ====
+[00000.124754][0][1032][klog] INFO: Level | Type        | Size (KiB) | Sets  | Assoc. |
+[00000.124756][0][1032][klog] INFO: L1    | Data        | 32         | 64    | 8      |
+[00000.124757][0][1032][klog] INFO: L1    | Instruction | 32         | 64    | 8      |
+[00000.124759][0][1032][klog] INFO: L2    | Unified     | 4096       | 4096  | 16     |
+[00000.124760][0][1032][klog] INFO: L3    | Unified     | 16384      | 16384 | 16     |
+[00000.124760][0][1032][klog] INFO: 
+[00000.124761][0][1032][klog] INFO: Vendor: Intel
+[00000.124762][0][1032][klog] INFO: Microarchitecture: Intel Skylake
+[00000.124763][0][1032][klog] INFO: Processor: Intel(R) Core(TM) i5-8600K CPU @ 3.60GHz
+[00000.124765][0][1032][klog] INFO: Hypervisor: KVMKVMKVM
+[00000.124765][0][1032][klog] INFO: Family/Model/Stepping: 0x6/0x9e/0xa
+[00000.124766][0][1032][klog] INFO: Patch level: 0
+[00000.124766][0][1032][klog] INFO: 
+[00000.124766][0][1032][klog] INFO: Features:
+[00000.124769][0][1032][klog] INFO: hypervisor, rdrand, f16c, avx, xsave, aes, tsc_deadline, popcnt, movbe, x2apic, sse4_2
+[00000.124772][0][1032][klog] INFO: sse4_1, pcid, pdcm, cmpxchg16b, fma, ssse3, vmx, pclmulqdq, sse3, htt, ss, sse2, sse
+[00000.124774][0][1032][klog] INFO: fxsr, mmx, clfsh, pse36, pat, cmov, mca, pge, mtrr, sep, apic, cx8, mce, pae, msr
+[00000.124778][0][1032][klog] INFO: tsc, pse, de, vme, fpu, clflushopt, smap, adx, rdseed, mpx, rtm, invpcid, erms, bmi2
+[00000.124780][0][1032][klog] INFO: smep, avx2, hle, bmi1, tsc_adjust, fsgsbase
+[00000.124780][0][1032][klog] INFO: 
+[00000.124780][0][1032][klog] INFO: Properties:
+[00000.124781][0][1032][klog] INFO: meltdown, l1tf, mds/taa, md_clear, md_clear_user_return, swapgs_bug, swapgs_bug_mitigated
+[00000.124783][0][1032][klog] INFO: pcid_good, spec_ctrl, ssb, ssbd, ibpb, ibpb_ctxt_switch, ras_fill, retpoline, jcc_fix
+[00000.124783][0][1032][klog] INFO: 
+[00000.124783][0][1032][klog] INFO: 
+[00000.124783][0][1032][klog] INFO: Kernel PTI enabled
+[00000.124800][0][1032][klog] INFO: initializing platform
+[00000.124800][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff00255120 (x86_perfmon) at level 0xb0000, flags 0x1
+[00000.124821][0][1032][klog] INFO: x86_perfmon_have_mchbar_data:374: perfmon: unsupported pci device: 0x8086.0x29c0
+[00000.124821][0][1032][klog] INFO: PMU: version 2
+[00000.124876][0][1032][klog] INFO: UART: started IRQ driven RX
+[00000.124876][0][1032][klog] INFO: UART: started IRQ driven TX
+[00000.124877][0][1032][klog] INFO: No EFI available on system.
+[00000.125063][0][1032][klog] INFO: booting apic ids: 0x1 0x2 0x3 
+[00000.135271][0][1044][klog] INFO: INIT: cpu 2, calling hook 0xffffffff002dd420 (mp_all_cpu_startup_checkin) at level 0xc0000, flags 0x3
+[00000.135271][0][1043][klog] INFO: INIT: cpu 1, calling hook 0xffffffff002dd420 (mp_all_cpu_startup_checkin) at level 0xc0000, flags 0x3
+[00000.135271][0][1045][klog] INFO: INIT: cpu 3, calling hook 0xffffffff002dd420 (mp_all_cpu_startup_checkin) at level 0xc0000, flags 0x3
+[00000.135276][0][1044][klog] INFO: entering scheduler on cpu 2
+[00000.135278][0][1045][klog] INFO: entering scheduler on cpu 3
+[00000.135280][0][1043][klog] INFO: entering scheduler on cpu 1
+[00000.136322][0][1032][klog] INFO: smbios: manufacturer="QEMU" product="Standard PC (Q35 + ICH9, 2009)"
+[00000.136322][0][1032][klog] INFO: initializing late arch
+[00000.136323][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff00160c40 (debuglog) at level 0xc0000, flags 0x1
+[00000.136342][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff001e78e0 (x86_pcie_init) at level 0xc0000, flags 0x1
+[00000.136357][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff002dd420 (mp_all_cpu_startup_checkin) at level 0xc0000, flags 0x3
+[00000.136358][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff002f67e0 (platform_dev_init) at level 0xc0000, flags 0x1
+[00000.136373][0][1032][klog] INFO: moving to last init level
+[00000.136375][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff00108660 (kcounters) at level 0xdffff, flags 0x1
+[00000.136376][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff001fc980 (ktrace) at level 0xdffff, flags 0x1
+[00000.144006][0][1032][klog] INFO: ktrace: buffer at 0xffffff9d30b9d000 (33554432 bytes)
+[00000.144036][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff00208ce0 (finalize_root_resource_filter) at level 0xdffff, flags 0x1
+[00000.144043][0][1032][klog] INFO: Final MMIO Deny list is:
+[00000.144045][0][1032][klog] INFO: Region [0x100000, 0x7ffdf000)
+[00000.144045][0][1032][klog] INFO: Region [0xfec00000, 0xfec01000)
+[00000.144046][0][1032][klog] INFO: Region [0xfee00000, 0xfee01000)
+[00000.144047][0][1032][klog] INFO: Region [0x100000000, 0x180000000)
+[00000.144050][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff00104f00 (kernel_shell) at level 0xe0000, flags 0x1
+[00000.144085][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff00214700 (userboot) at level 0xe0000, flags 0x1
+[00000.144479][0][1032][klog] INFO: userboot: ramdisk       0x1355000 @ 0xffffff8001459000
+[00000.146592][0][1032][klog] INFO: userboot: userboot rodata       0 @ [0x2fdf97e1000,0x2fdf97e6000)
+[00000.151844][0][1032][klog] INFO: userboot: userboot code    0x5000 @ [0x2fdf97e6000,0x2fdf97fb000)
+[00000.151852][0][1032][klog] INFO: userboot: vdso/full rodata       0 @ [0x2fdf97fb000,0x2fdf9802000)
+[00000.151855][0][1032][klog] INFO: userboot: vdso/full code    0x7000 @ [0x2fdf9802000,0x2fdf9804000)
+[00000.152008][0][1032][klog] INFO: memory-pressure: memory watermarks - OutOfMemory: 50MB, Critical: 150MB, Warning: 300MB, Debounce: 1MB
+[00000.152012][0][1032][klog] INFO: memory-pressure: eviction trigger level - Critical
+[00000.152045][0][1032][klog] INFO: userboot: entry point             @ 0x2fdf97e6ac0
+[00000.160441][0][1079][klog] INFO: memory-pressure: memory availability state - Normal
+[00000.160862][1051][1073][klog] INFO: userboot: option "kernel.serial=legacy"
+[00000.160869][1051][1073][klog] INFO: userboot: option "blobfs.cache-eviction-policy=NEVER_EVICT"
+[00000.160870][1051][1073][klog] INFO: userboot: option "console.shell=true"
+[00000.160870][1051][1073][klog] INFO: userboot: option "kernel.enable-debugging-syscalls=true"
+[00000.160871][1051][1073][klog] INFO: userboot: option "kernel.enable-serial-syscalls=true"
+[00000.160871][1051][1073][klog] INFO: userboot: option "netsvc.all-features=true"
+[00000.160872][1051][1073][klog] INFO: userboot: option "netsvc.disable=false"
+[00000.160872][1051][1073][klog] INFO: userboot: option "kernel.oom.behavior=reboot"
+[00000.160873][1051][1073][klog] INFO: userboot: option "virtcon.hide-on-boot="
+[00000.160873][1051][1073][klog] INFO: userboot: option "live_usb.is_system=true"
+[00000.160874][1051][1073][klog] INFO: userboot: option "/tmp/vdl_staging_z9UDm7/femu_kernel="
+[00000.160874][1051][1073][klog] INFO: userboot: option "verbose="
+[00000.160875][1051][1073][klog] INFO: userboot: option "kernel.serial=legacy"
+[00000.160875][1051][1073][klog] INFO: userboot: option "TERM=xterm-256color"
+[00000.160876][1051][1073][klog] INFO: userboot: option "kernel.entropy-mixin=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+[00000.160876][1051][1073][klog] INFO: userboot: option "kernel.halt-on-panic=true"
+[00000.160877][1051][1073][klog] INFO: userboot: option "zircon.nodename=fuchsia-5254-0063-5e7a"
+[00000.160877][1051][1073][klog] INFO: userboot: option "multiboot.boot_loader_name=qemu"
+[00000.160911][1051][1073][klog] INFO: userboot: OK allocate 160952-byte VMO for bootfs-decompression-scratch
+[00000.160913][1051][1073][klog] INFO: userboot: OK map 160952-byte VMO for bootfs-decompression-scratch
+[00000.160915][1051][1073][klog] INFO: userboot: OK name 160952-byte VMO for bootfs-decompression-scratch
+[00000.165893][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff0018b370 (pager_init) at level 0xffffffff, flags 0x1
+[00000.165903][0][1032][klog] INFO: INIT: cpu 0, calling hook 0xffffffff00281400 (scanner_init) at level 0xffffffff, flags 0x1
+[00000.263329][1051][1073][klog] INFO: userboot: OK unmap 160952-byte VMO for bootfs-decompression-scratch
+[00000.263531][1051][1073][klog] INFO: userboot: searching bootfs for 'bin/bootsvc' (program)
+[00000.263546][1051][1073][klog] INFO: userboot: 'bin/bootsvc' has PT_INTERP "lib/ld.so.1"
+[00000.263547][1051][1073][klog] INFO: userboot: searching bootfs for 'lib/ld.so.1' (dynamic linker)
+[00000.263571][1051][1073][klog] INFO: userboot: userboot: loaded lib/ld.so.1 at 0x427747111000, entry point 0x42774716b908
+[00000.263584][1051][1073][klog] INFO: userboot: userboot: loaded vDSO at 0x43c862dc3000, entry point 0x43c862dcaeae
+[00000.263607][1051][1073][klog] INFO: userboot: process bin/bootsvc started.
+[00000.263617][1051][1073][klog] INFO: userboot: waiting for loader-service requests...
+[00000.264047][1051][1073][klog] INFO: userboot: searching bootfs for 'lib/libfdio.so' (shared library)
+[00000.264111][1051][1073][klog] INFO: userboot: searching bootfs for 'lib/libtrace-engine.so' (shared library)
+[00000.264157][1051][1073][klog] INFO: userboot: searching bootfs for 'lib/libmemfs.so' (shared library)
+[00000.264196][1051][1073][klog] INFO: userboot: searching bootfs for 'lib/libasync-default.so' (shared library)
+[00000.264236][1051][1073][klog] INFO: userboot: searching bootfs for 'lib/liblaunchpad.so' (shared library)
+[00000.264272][1051][1073][klog] INFO: userboot: searching bootfs for 'lib/libsyslog.so' (shared library)
+[00000.264339][1051][1073][klog] INFO: userboot: searching bootfs for 'lib/libc++.so.2' (shared library)
+[00000.264406][1051][1073][klog] INFO: userboot: searching bootfs for 'lib/libc++abi.so.1' (shared library)
+[00000.264455][1051][1073][klog] INFO: userboot: searching bootfs for 'lib/libunwind.so.1' (shared library)
+[00000.265241][1087][1090][klog] INFO: [[[ELF module #0x0 "<application>" BuildID=b003809098db74ce 0x11735ec2000]]]
+[00000.265245][1087][1090][klog] INFO: [[[ELF module #0x3 "libfdio.so" BuildID=5fbe829b9d33d40f 0x2375b384000]]]
+[00000.265249][1087][1090][klog] INFO: [[[ELF module #0x4 "libtrace-engine.so" BuildID=f69bd284e7fc5a38 0x2c5c620000]]]
+[00000.265253][1087][1090][klog] INFO: [[[ELF module #0x5 "libmemfs.so" BuildID=a7654bfb1b00fde8 0x4309ba6000]]]
+[00000.265256][1087][1090][klog] INFO: [[[ELF module #0x6 "libasync-default.so" BuildID=819a193981fe3087 0x2c2634ea000]]]
+[00000.265260][1087][1090][klog] INFO: [[[ELF module #0x7 "liblaunchpad.so" BuildID=4e2bed1f47769e60 0x997f487000]]]
+[00000.265264][1087][1090][klog] INFO: [[[ELF module #0x8 "libsyslog.so" BuildID=1e13b168ac97a7f7 0x1763e59c000]]]
+[00000.265267][1087][1090][klog] INFO: [[[ELF module #0x2 "<vDSO>" BuildID=a925ca9dcb3c3300 0x43c862dc3000]]]
+[00000.265271][1087][1090][klog] INFO: [[[ELF module #0x1 "libc.so" BuildID=e181b8b0f0ccfb2b 0x427747111000]]]
+[00000.265279][1087][1090][klog] INFO: [[[ELF module #0x9 "libc++.so.2" BuildID=83a8006b124d9846 0x3c1af86000]]]
+[00000.265283][1087][1090][klog] INFO: [[[ELF module #0xa "libc++abi.so.1" BuildID=8c93d0bac481971f 0x347fa6a0000]]]
+[00000.265286][1087][1090][klog] INFO: [[[ELF module #0xb "libunwind.so.1" BuildID=307312511864f0a1 0x206e17a6000]]]
+[00000.265605][1051][1073][klog] INFO: userboot: loader-service channel peer closed
+[00000.265625][1051][1073][klog] INFO: userboot: finished!
+[00000.265668][1087][1090][klog] INFO: bootsvc: Starting...
+[00000.265704][1087][1090][klog] INFO: bootsvc: Taking resources...
+[00000.265714][1087][1090][klog] INFO: bootsvc: Creating bootfs service...
+[00000.266996][1087][1090][klog] INFO: bootsvc: Retrieving boot image...
+[00000.267101][1087][1090][klog] INFO: bootsvc: Decommitted BOOTDATA VMO from 0 to 0x1354000
+[00000.267107][1087][1090][klog] INFO: bootsvc: Loading boot arguments...
+[00000.267171][1087][1090][klog] INFO: bootsvc: Creating svcfs service...
+[00000.267227][1087][1090][klog] INFO: bootsvc: Loading kernel VMOs...
+[00000.267286][1087][1090][klog] INFO: bootsvc: Creating loader service...
+[00000.267292][1087][1090][klog] INFO: bootsvc: Launching next process...
+[00000.267391][1087][1171][klog] INFO: bootsvc: bootsvc.next = bin/component_manager,fuchsia-boot:///#meta/root.cm,--config,/boot/config/component_manager
+[00000.267973][1087][1171][klog] INFO: bootsvc: Launched bin/component_manager
+[00000.271732][1179][1196][klog] INFO: [component_manager] INFO: Component manager is starting up...
+[00000.272969][1179][1196][klog] INFO: [component_manager] INFO: Loaded runtime config from /boot/config/component_manager
+[00000.274036][1179][1295][klog] INFO: [component_manager] INFO: Field `out_dir_contents` is set to Hub.
+[00000.289319][1949][1951][archivist, archivist] INFO: Logging started. 
+[00000.289363][1949][1951][archivist, archivist_lib::logs::redact] INFO: Log redaction canary: Email: alice@website.tld, IPv4: 8.8.8.8, IPv461: ::ffff:12.34.56.78, IPv462: ::ffff:ab12:cd34, IPv6: 2001:503:eEa3:0:0:0:0:30, IPv6C: fec8::7d84:c1dc:ab34:656a, IPv6LL: fe80::7d84:c1dc:ab34:656a, UUID: ddd0fA34-1016-11eb-adc1-0242ac120002, MAC: de:ad:BE:EF:42:5a 
+[00000.289374][1179][1289][klog] INFO: [component_manager] WARN: No capability available at path /svc/fuchsia.logger.LogSink for component /bootstrap:0/archivist:0, verify the component has the proper `use` declaration.
+[00000.292235][1800][1802][klog] INFO: console-launcher: running
+[00000.293119][1800][1802][console-launcher.cm] INFO: [main.cc(142)] console.shell: enabled
+[00000.295888][1763][1765][live_usb.cm] INFO: Not booting from a USB!
+[00000.296467][1859][1861][klog] INFO: netsvc: running in full mode
+[00000.296771][1800][1802][console-launcher.cm] INFO: [console_launcher.cc(268)] Launching /boot/bin/sh (sh:console)
+
+[00000.304712][2559][2561][driver_manager.cm] INFO: [system_instance.cc(164)] Set UTC backstop to 1614531351000000000
+[00000.305153][1859][1861][klog] INFO: netsvc: nodename='fuchsia-5254-0063-5e7a'
+[00000.307551][2857][2859][klog] INFO: [00000.307525][2857][2859][fshost.cm] INFO: [main.cc(232)] Config: blobfs, bootpart, format-minfs-on-corruption, fvm, gpt, gpt-all, minfs, minfs-max-bytes, wait-for-data
+[00000.307940][2857][2859][klog] ERROR: [00000.307935][2857][2859][fshost.cm] ERROR: [src/storage/fshost/config.cc(130)] Can't read integer option value for minfs-max-bytes, got 
+[00000.309016][3219][3221][power_manager] INFO: started
+[00000.314716][2559][2561][driver_manager.cm] INFO: [main.cc(474)] Full system required, ignoring fallback drivers until '/system' is loaded
+[00000.315769][2559][2561][driver_manager.cm] INFO: [driver_host.cc(134)] Launching driver_host 'driver_host:sys' (pid 3709)
+[00000.316515][2559][2561][driver_manager.cm] INFO: [driver_host.cc(134)] Launching driver_host 'driver_host:test' (pid 3764)
+[00000.317406][2559][2561][driver_manager.cm] INFO: [driver_host.cc(134)] Launching driver_host 'driver_host:root' (pid 3826)
+[00000.318396][2559][2561][driver_manager.cm] INFO: [driver_host.cc(134)] Launching driver_host 'driver_host:misc' (pid 3910)
+[00000.318852][2559][2561][driver_manager.cm] INFO: [coordinator.cc(172)] Registered with power manager successfully
+[00000.321399][3709][3711][driver_host:sys, driver, platform_bus] ERROR: [src/devices/bus/drivers/platform/platform-bus.cc(543)] Invalid zbi_board_info_t VMO
+[00000.321729][2559][2561][driver_manager.cm] INFO: [init_task.cc(22)] Running init task for device 0x2fd6c665090 'platform'
+[00000.322108][2559][2561][driver_manager.cm] INFO: [fidl.cc(152)] Initialized device 0x2fd6c665090 'platform': ZX_OK
+[00000.322135][3709][3711][driver_host:sys, device, sys/cpu-trace] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/cpu-trace.so'
+[00000.322344][3709][3711][driver_host:sys, driver, cpu_trace] INFO: [perf-mon.cc(122)] GetHwProperties: No PM support
+[00000.322352][3709][3711][driver_host:sys, driver, cpu_trace] INFO: [intel-pt.cc(245)] IntelPT: No PT support
+[00000.322360][3709][3711][driver_host:sys, device, sys/cpu-trace] ERROR: [src/devices/bin/driver_host/device_controller_connection.cc(173)] Failed to bind driver '/boot/driver/cpu-trace.so': ZX_ERR_NOT_SUPPORTED
+[00000.322667][2559][2561][driver_manager.cm] ERROR: [src/devices/bin/driver_manager/coordinator.cc(1053)] Failed to bind driver 'cpu-trace': ZX_ERR_NOT_SUPPORTED
+[00000.322707][3709][3711][driver_host:sys, device, sys/platform] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/platform-bus-x86.so'
+[00000.322759][3764][3766][driver_host:test, device, proxy] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/test.so'
+[00000.324192][3826][3828][driver_host:root, device, proxy] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/builtin.so'
+[00000.325026][3910][3913][driver_host:misc, device, proxy] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/ramdisk.so'
+[00000.326800][3709][3711][driver_host:sys, driver, acpi_bus] INFO: [iommu.cc(398)] not using IOMMU
+[00000.326970][3709][3711][driver_host:sys, driver, platform_bus] INFO: [platform-bus.cc(215)] PlatformBus: set board name to "Standard PC (Q35 + ICH9, 2009)"
+[00000.326978][3709][3711][driver_host:sys, driver, platform_bus] INFO: [platform-bus.cc(234)] PlatformBus: set bootloader vendor to "SeaBIOS"
+[00000.327188][2559][2561][driver_manager.cm] INFO: [init_task.cc(22)] Running init task for device 0x2fd6c6654a0 '00:00:1b'
+[00000.327303][2559][2561][driver_manager.cm] INFO: [fidl.cc(152)] Initialized device 0x2fd6c6654a0 '00:00:1b': ZX_OK
+[00000.327490][3709][3711][driver_host:sys, device, sys/platform/00:00:1b] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/sysmem.so'
+[00000.358139][1818][2676][klog] INFO: sysmem-connector: svchost.cm connected to sysmem driver 000
+[00000.358538][3709][4451][driver_host:sys, driver, acpi_bus] INFO: [dev-pwrbtn.cc(292)] acpi-pwrbtn: initialized
+[00000.358740][3709][3711][driver_host:sys, device, sys/platform/acpi/acpi-pwrbtn] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/hid.so'
+[00000.363173][3709][4451][driver_host:sys, driver, acpi_bus] WARNING: [src/devices/board/drivers/x86/acpi-nswalk.cc(143)] acpi: PCI/PCIe device "PCI0" missing _BBN entry, defaulting to 0
+[00000.363721][3709][3711][driver_host:sys, device, sys/platform/acpi/acpi-pwrbtn/hid-device-000] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/hid-input-report.so'
+[00000.363985][3709][3711][driver_host:sys, driver, hid_input_report] ERROR: [src/ui/input/drivers/hid-input-report/input-report.cc(193)] Can't process HID report descriptor for, all parsing attempts failed.
+[00000.363999][3709][3711][driver_host:sys, device, sys/platform/acpi/acpi-pwrbtn/hid-device-000] ERROR: [src/devices/bin/driver_host/device_controller_connection.cc(173)] Failed to bind driver '/boot/driver/hid-input-report.so': ZX_ERR_INTERNAL
+[00000.364017][2559][2561][driver_manager.cm] ERROR: [src/devices/bin/driver_manager/coordinator.cc(1053)] Failed to bind driver 'hid-device-000': ZX_ERR_INTERNAL
+[00000.387490][3709][4451][driver_host:sys, driver, acpi_bus] INFO: [kpci.cc(596)] acpi: published device pci(0x172af4ec1b0), parent=sys(0x177af4e9010), handle=0x171af4f5050
+[00000.387626][3709][3711][driver_host:sys, device, sys/pci] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/bus-pci.so'
+[00000.387739][3709][4451][driver_host:sys, driver, acpi_bus] INFO: [acpi-nswalk.cc(111)] acpi: published device rtc(0x172af4ed460), parent=acpi(0x177af4f2070), handle=0x171af4f65e0
+[00000.388048][3709][4451][driver_host:sys, driver, acpi_bus] INFO: [acpi-nswalk.cc(111)] acpi: published device i8042(0x172af4ec690), parent=acpi(0x177af4f2070), handle=0x171af4f6220
+[00000.389258][2559][2561][driver_manager.cm] INFO: [driver_host.cc(134)] Launching driver_host 'driver_host:pci#1:8086:2668' (pid 4616)
+[00000.390395][2559][2561][driver_manager.cm] INFO: [driver_host.cc(134)] Launching driver_host 'driver_host:pci#2:1af4:1052' (pid 4691)
+[00000.391692][2559][2561][driver_manager.cm] INFO: [driver_host.cc(134)] Launching driver_host 'driver_host:pci#3:8086:2922' (pid 4768)
+[00000.393090][2559][2561][driver_manager.cm] INFO: [driver_host.cc(134)] Launching driver_host 'driver_host:pci#4:1af4:1052' (pid 4880)
+[00000.394660][2559][2561][driver_manager.cm] INFO: [driver_host.cc(134)] Launching driver_host 'driver_host:pci#5:1af4:1000' (pid 5026)
+[00000.396230][2559][2561][driver_manager.cm] INFO: [driver_host.cc(134)] Launching driver_host 'driver_host:pci#6:607d:f153' (pid 5135)
+[00000.396895][3709][4451][driver_host:sys, driver, acpi_bus] INFO: [acpi-nswalk.cc(111)] acpi: published device serial(0x172af4ed6d0), parent=acpi(0x177af4f2070), handle=0x171af4f6680
+[00000.397206][3709][4451][driver_host:sys, driver, acpi_bus] INFO: [acpi-nswalk.cc(111)] acpi: published device serial(0x172af4ec760), parent=acpi(0x177af4f2070), handle=0x171af4f6090
+[00000.398886][2559][2561][driver_manager.cm] INFO: [driver_host.cc(134)] Launching driver_host 'driver_host:pci#8:8086:2922' (pid 5352)
+[00000.399335][3709][4451][driver_host:sys, driver, acpi_bus] INFO: [acpi-nswalk.cc(111)] acpi: published device goldfish(0x172af4ee230), parent=acpi(0x177af4f2070), handle=0x171af5005e0
+[00000.399579][3709][3711][driver_host:sys, device, sys/platform/acpi/rtc] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/intel-rtc.so'
+[00000.400441][3709][4451][driver_host:sys, driver, acpi_bus] INFO: [acpi-nswalk.cc(111)] acpi: published device goldfish-sync(0x172af4eea50), parent=acpi(0x177af4f2070), handle=0x171af4ff550
+[00000.400892][3709][3711][driver_host:sys, device, sys/platform/acpi/i8042] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/pc-ps2.so'
+[00000.401094][3709][3711][driver_host:sys, device, sys/platform/acpi/i8042] WARNING: [src/devices/bin/driver_host/device_controller_connection.cc(176)] Driver '/boot/driver/pc-ps2.so' did not add a child device in bind()
+[00000.401164][3709][3711][driver_host:sys, device, sys/platform/acpi/serial] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/uart16550.so'
+[00000.401375][3709][3711][driver_host:sys, driver, uart16550] ERROR: [src/devices/serial/drivers/uart16550/uart16550.cc(78)] Init: acpi_.GetPio failed
+[00000.401383][3709][5589][klog] INFO: i8042 device 0xab 0x41
+[00000.401385][3709][3711][driver_host:sys, driver, uart16550] ERROR: [src/devices/serial/drivers/uart16550/uart16550.cc(48)] Create: Init failed
+[00000.401395][3709][3711][driver_host:sys, device, sys/platform/acpi/serial] ERROR: [src/devices/bin/driver_host/device_controller_connection.cc(173)] Failed to bind driver '/boot/driver/uart16550.so': ZX_ERR_NOT_FOUND
+[00000.401413][3709][3711][driver_host:sys, device, sys/platform/acpi/serial] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/uart16550.so'
+[00000.401445][2559][2561][driver_manager.cm] ERROR: [src/devices/bin/driver_manager/coordinator.cc(1053)] Failed to bind driver 'serial': ZX_ERR_NOT_FOUND
+[00000.401917][3709][3711][driver_host:sys, device, sys/platform/acpi/goldfish] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/goldfish.so'
+[00000.402423][2559][2561][driver_manager.cm] INFO: [coordinator.cc(1500)] Device 'goldfish-pipe' matched fragment 0 of composite 'goldfish-control-2'
+[00000.402473][3709][3711][driver_host:sys, device, sys/platform/acpi/goldfish-sync] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/goldfish_sync.so'
+[00000.403249][2559][2561][driver_manager.cm] INFO: [coordinator.cc(1500)] Device 'goldfish-sync' matched fragment 2 of composite 'goldfish-control-2'
+[00000.403355][3709][3711][driver_host:sys, device, sys/platform/acpi/i8042/i8042-keyboard] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/hid.so'
+[00000.403459][4691][4693][driver_host:pci#2:1af4:1052, device, 00:02.0] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/virtio_input.so'
+[00000.403844][4768][4770][driver_host:pci#3:8086:2922, device, 00:03.0] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/ahci.so'
+[00000.404306][4616][4618][driver_host:pci#1:8086:2668, device, 00:01.0] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/intel-hda.so'
+[00000.404808][4880][4882][driver_host:pci#4:1af4:1052, device, 00:04.0] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/virtio_input.so'
+[00000.405522][3709][3711][driver_host:sys, device, sys/platform/acpi/serial/uart16550] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/serial.so'
+[00000.406119][3709][3711][driver_host:sys, device, sys/platform/acpi/goldfish/goldfish-pipe] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/fragment.so'
+[00000.406483][3709][3711][driver_host:sys, device, sys/platform/acpi/goldfish-sync/goldfish-sync] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/fragment.so'
+[00000.406638][3709][3711][driver_host:sys, device, sys/platform/acpi/i8042/i8042-keyboard/hid-device-001] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/hid-input-report.so'
+[00000.406735][5026][5028][driver_host:pci#5:1af4:1000, device, 00:05.0] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/virtio_ethernet.so'
+[00000.407423][5135][5138][driver_host:pci#6:607d:f153, device, 00:0b.0] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/goldfish_address_space.so'
+[00000.408094][5352][5356][driver_host:pci#8:8086:2922, device, 00:1f.2] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/ahci.so'
+[00000.408376][2559][2561][driver_manager.cm] INFO: [coordinator.cc(1500)] Device 'goldfish-address-space' matched fragment 1 of composite 'goldfish-control-2'
+[00000.408616][5135][5138][driver_host:pci#6:607d:f153, device, 00:0b.0/goldfish-address-space] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/fragment.so'
+[00000.410254][2559][2561][driver_manager.cm] INFO: [driver_host.cc(134)] Launching driver_host 'driver_host:composite-device' (pid 6184)
+[00000.410706][4768][6114][driver_host:pci#3:8086:2922, driver, ahci] INFO: [sata.cc(113)] sata0: dev info
+[00000.410729][4768][6114][driver_host:pci#3:8086:2922, driver, ahci] INFO: [sata.cc(114)]   serial=QM00013             
+[00000.410732][4768][6114][driver_host:pci#3:8086:2922, driver, ahci] INFO: [sata.cc(115)]   firmware rev=2.5+    
+[00000.410735][4768][6114][driver_host:pci#3:8086:2922, driver, ahci] INFO: [sata.cc(116)]   model id=QEMU HARDDISK                           
+[00000.410738][4768][6114][driver_host:pci#3:8086:2922, driver, ahci] INFO: [sata.cc(121)]   major=0xf0 
+[00000.410740][4768][6114][driver_host:pci#3:8086:2922, driver, ahci] INFO: [sata.cc(138)] ATA/ATAPI
+[00000.410743][4768][6114][driver_host:pci#3:8086:2922, driver, ahci] INFO: [sata.cc(147)]  DMA
+[00000.410746][4768][6114][driver_host:pci#3:8086:2922, driver, ahci] INFO: [sata.cc(153)]  32 commands
+[00000.410748][4768][6114][driver_host:pci#3:8086:2922, driver, ahci] INFO: [sata.cc(164)]   LBA48
+[00000.410751][4768][6114][driver_host:pci#3:8086:2922, driver, ahci] INFO: [sata.cc(169)]  4194304 sectors,  sector size=512
+[00000.411438][4616][4618][driver_host:pci#1:8086:2668, driver, intel_hda] WARNING: [src/media/audio/drivers/intel-hda/controller/intel-hda-controller-init.cc(641)] [IHDA Controller 00:01.0] Error probing DSP: ZX_ERR_NOT_SUPPORTED
+[00000.411946][4768][4770][driver_host:pci#3:8086:2922, device, 00:03.0/ahci/sata0] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/block.core.so'
+[00000.413007][4616][4618][driver_host:pci#1:8086:2668, device, 00:01.0/intel-hda-000/intel-hda-codec-000] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/qemu-audio-codec.so'
+[00000.415560][5026][5028][driver_host:pci#5:1af4:1000, device, 00:05.0/virtio-net] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/ethernet.so'
+[00000.415934][1859][1861][klog] INFO: netifc: ? /dev/class/ethernet/000
+[00000.415946][5026][5028][driver_host:pci#5:1af4:1000, driver, ethernet] WARNING: [src/connectivity/ethernet/drivers/ethernet/ethernet.cc(992)] eth: bind: device 'virtio-net': unable to disable promiscuous mode: ZX_ERR_NOT_SUPPORTED
+[00000.416869][2857][3409][klog] INFO: [00000.416850][2857][3409][fshost.cm] INFO: [block-device.cc(253)] Binding: fvm.so
+[00000.416901][1859][1861][klog] INFO: netsvc: using /dev/class/ethernet/000
+[00000.417034][1859][1861][klog] INFO: netifc: create 512 eth buffers
+[00000.418540][4768][4770][driver_host:pci#3:8086:2922, device, 00:03.0/ahci/sata0/block] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/fvm.so'
+[00000.418616][1859][1861][klog] INFO: macaddr: 52:54:00:63:5e:7a
+[00000.418659][1859][1861][klog] INFO: ip6addr (LL) : fe80::5054:ff:fe63:5e7a
+[00000.418664][1859][1861][klog] INFO: ip6addr (ULA): fd54:63:5e7a::63:5e7a
+[00000.418666][1859][1861][klog] INFO: snmaddr: ff02::1:ff63:5e7a
+[00000.418769][1859][1861][klog] INFO: netsvc: start
+[00000.418988][1859][1861][klog] INFO: netifc: Interface up.
+[00000.419690][6184][6186][driver_host:composite-device, device, goldfish-control-2] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/goldfish_control.so'
+[00000.421209][4691][4693][driver_host:pci#2:1af4:1052, device, 00:02.0/virtio-input] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/hid.so'
+[00000.421790][4880][4882][driver_host:pci#4:1af4:1052, device, 00:04.0/virtio-input] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/hid.so'
+[00000.422322][4691][4693][driver_host:pci#2:1af4:1052, device, 00:02.0/virtio-input/hid-device-001] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/hid-input-report.so'
+[00000.423067][2559][2561][driver_manager.cm] INFO: [init_task.cc(22)] Running init task for device 0x2fd6c675cb0 'fvm'
+[00000.423074][6184][6186][driver_host:composite-device, device, goldfish-control-2/goldfish-control] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/goldfish-display.so'
+[00000.423607][4880][4882][driver_host:pci#4:1af4:1052, device, 00:04.0/virtio-input/hid-device-000] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/hid-input-report.so'
+[00000.424494][6184][6186][driver_host:composite-device, device, goldfish-control-2/goldfish-control/goldfish-display] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/display.so'
+[00000.424824][2559][2561][driver_manager.cm] INFO: [fidl.cc(152)] Initialized device 0x2fd6c675cb0 'fvm': ZX_OK
+[00000.424838][4768][7237][driver_host:pci#3:8086:2922, driver, fvm] INFO: [vpartition_manager.cc(325)] Found reserved partition with 1 slices
+[00000.425168][6184][6186][driver_host:composite-device, driver, display_controller] WARNING: [src/graphics/display/drivers/display/controller.cc(1012)] Display Capture not supported by this platform
+[00000.425444][4768][7237][driver_host:pci#3:8086:2922, driver, fvm] INFO: [vpartition_manager.cc(740)] Partition 1:0x3b879497040limit:0
+[00000.425455][4768][7237][driver_host:pci#3:8086:2922, driver, fvm] INFO: [vpartition_manager.cc(740)] Partition 2:0x3b879497080limit:0
+[00000.425460][4768][7237][driver_host:pci#3:8086:2922, driver, fvm] INFO: [vpartition_manager.cc(740)] Partition 3:0x3b8794970c0limit:0
+[00000.425861][4768][4770][driver_host:pci#3:8086:2922, device, 00:03.0/ahci/sata0/block/fvm/blobfs-p-1] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/block.core.so'
+[00000.426367][4768][7237][driver_host:pci#3:8086:2922, driver, fvm] INFO: [vpartition_manager.cc(404)] Loaded 3 partitions, slice size=8388608
+[00000.426368][4768][4770][driver_host:pci#3:8086:2922, device, 00:03.0/ahci/sata0/block/fvm/minfs-p-2] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/block.core.so'
+[00000.426546][4768][4770][driver_host:pci#3:8086:2922, device, 00:03.0/ahci/sata0/block/fvm/internal-p-3] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/block.core.so'
+[00000.426940][2857][3409][klog] INFO: [00000.426930][2857][3409][fshost.cm] INFO: [block-device.cc(512)] BlockDevice::MountFilesystem(blobfs)
+[00000.427788][2857][3409][klog] INFO: [00000.427778][2857][3409][fshost.cm] INFO: [fdio.cc(174)] launch /pkg/bin/blobfs (/pkg/bin/blobfs) OK
+[00000.428594][3709][5589][klog] INFO: i8042 device 0x00
+[00000.429161][3709][3711][driver_host:sys, device, sys/platform/acpi/i8042/i8042-mouse] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/hid.so'
+[00000.429654][3709][3711][driver_host:sys, device, sys/platform/acpi/i8042/i8042-mouse/hid-device-002] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/hid-input-report.so'
+[00000.434767][7418][7420][klog] INFO: [00000.434743][7418][7420][/pkg/bin/blobfs] INFO: [blobfs.cc(177)] Initialized user pager
+[00000.434826][7418][7420][klog] INFO: [00000.434822][7418][7420][/pkg/bin/blobfs] INFO: [blobfs.cc(185)] Replaying journal
+[00000.434921][7418][7420][klog] INFO: [00000.434913][7418][7420][/pkg/bin/blobfs, journal] INFO: [replay.cc(175)] replay: Initializing journal buffer (1023 blocks)
+[00000.440084][7418][7420][klog] INFO: [00000.440074][7418][7420][/pkg/bin/blobfs, journal] INFO: [replay.cc(109)] replay: entry_start: 0, sequence_number: 0
+[00000.440722][7418][7420][klog] INFO: [00000.440709][7418][7420][/pkg/bin/blobfs] INFO: [common.cc(104)] filesystem in clean state.
+[00000.441068][7418][7420][klog] INFO: [00000.441063][7418][7420][/pkg/bin/blobfs] INFO: [blobfs.cc(246)] Using eviction policy EVICT_IMMEDIATELY
+[00000.441086][7418][7420][klog] INFO: [00000.441083][7418][7420][/pkg/bin/blobfs] INFO: [blobfs.cc(248)] Using overridden pager eviction policy NEVER_EVICT
+[00000.476444][7418][7420][klog] INFO: [00000.476433][7418][7420][/pkg/bin/blobfs] INFO: [blobfs.cc(316)] detected oldest_minor_version 4, current minor version 4
+[00000.476577][7418][7420][klog] INFO: [00000.476572][7418][7420][/pkg/bin/blobfs] INFO: [blobfs.cc(339)] Using compression ZSTD_CHUNKED
+[00000.476587][7418][7420][klog] INFO: [00000.476584][7418][7420][/pkg/bin/blobfs] INFO: [blobfs.cc(347)] Using blob layout format: kCompactMerkleTreeAtEnd
+[00000.505724][2857][3409][klog] INFO: [00000.505716][2857][3409][fshost.cm] INFO: [block-device-manager.cc(255)] Formatting as zxcrypt partition
+[00000.508107][2857][3409][klog] INFO: [00000.508101][2857][3409][fshost.cm] INFO: [block-device.cc(270)] unsealing zxcrypt
+[00000.508843][2857][3409][klog] INFO: [00000.508832][2857][3409][fshost.cm] INFO: [block-watcher.cc(273)] /dev/class/block/003 ignored (not supported)
+[00000.509033][4768][4770][driver_host:pci#3:8086:2922, device, 00:03.0/ahci/sata0/block/fvm/minfs-p-2/block] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/zxcrypt.so'
+[00000.510578][4768][4770][driver_host:pci#3:8086:2922, device, 00:03.0/ahci/sata0/block/fvm/minfs-p-2/block/zxcrypt/unsealed] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/block.core.so'
+[00000.510933][2857][3409][klog] INFO: [00000.510927][2857][3409][fshost.cm] INFO: [block-device.cc(459)] Formatting minfs.
+[00002.152527][2857][3409][klog] INFO: [00002.152510][2857][3409][fshost.cm] INFO: [block-device.cc(478)] Minfs filesystem re-formatted. Expect data loss.
+[00002.152737][2857][3409][klog] INFO: [00002.152733][2857][3409][fshost.cm] INFO: [block-device.cc(607)] mounting minfs: format on corruption is enabled
+[00002.152762][2857][3409][klog] INFO: [00002.152759][2857][3409][fshost.cm] INFO: [block-device.cc(542)] BlockDevice::MountFilesystem(minfs)
+[00002.154625][2857][3409][klog] INFO: [00002.154615][2857][3409][fshost.cm] INFO: [fdio.cc(174)] launch /pkg/bin/minfs (/pkg/bin/minfs) OK
+[00002.160055][10943][10945][klog] INFO: [00002.160032][10943][10945][/pkg/bin/minfs] INFO: [minfs.cc(1259)] Replaying journal
+[00002.160141][10943][10945][klog] INFO: [00002.160129][10943][10945][/pkg/bin/minfs, journal] INFO: [replay.cc(175)] replay: Initializing journal buffer (2046 blocks)
+[00002.533383][10943][10945][klog] INFO: [00002.533372][10943][10945][/pkg/bin/minfs, journal] INFO: [replay.cc(109)] replay: entry_start: 0, sequence_number: 0
+[00002.739093][2857][3409][klog] INFO: [00002.739085][2857][3409][fshost.cm] INFO: [pkgfs-launcher.cc(139)] starting 'bin/pkgsvr' '5d5b58ee161dca45f77e3bb5f9b9f9302882c31c92b3a5259f31a6f39ca05b95'...
+[00002.742489][2857][3409][klog] INFO: [00002.742482][2857][3409][fshost.cm] INFO: [fdio.cc(174)] launch bin/pkgsvr (pkgfs) OK
+[00002.972073][11215][11605][klog] INFO: pkgsvr: pkgfs: enforce pkgfs/packages non-static allowlist: true
+[00002.972084][11215][11605][klog] INFO: pkgsvr: pkgfs: enforce executability restrictions: true
+[00002.978290][11215][11605][klog] INFO: pkgsvr: pkgfs: loading cache index
+[00003.659387][11215][11609][klog] INFO: pkgsvr: pkgfs: cache index loaded in 0.681s; found 177/177 packages
+[00003.659459][11215][11609][klog] INFO: pkgsvr: pkgfs: loading /pkgfs/packages non static allowlist
+[00003.660319][11215][11609][klog] INFO: pkgsvr: pkgfs: parsed non-static pkgs allowlist: &{map[amberctl:{} benchmark:{} cat:{} catapult_converter:{} curl:{} dart-inspect-benchmarks:{} fidl_benchmarks:{} fuchsia_benchmarks:{} garnet_input_latency_benchmarks:{} go_f
+[00003.660320][11215][11609][klog] INFO: idl_benchmarks:{} iquery:{} log_listener:{} ls:{} net-cli:{} netstack-benchmarks:{} pkgctl:{} remote-control:{} remote-diagnostics-bridge:{} rm:{} run:{} rust_inspect_benchmarks:{} system_monitor_harvester:{} uname:{} wlan:{
+[00003.660321][11215][11609][klog] INFO: }]}
+[00003.660358][11215][11609][klog] INFO: pkgsvr: system: will be served from 5d5b58ee161dca45f77e3bb5f9b9f9302882c31c92b3a5259f31a6f39ca05b95
+[00003.660363][11215][11609][klog] INFO: pkgsvr: pkgfs serving blobfs /blob
+[00003.666820][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'magma_pdev_gpu' '/system/driver/libmsd_vsi_test.so'
+[00003.668490][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'qmi_fake' '/system/driver/qmi-fake-transport.so'
+[00003.671657][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'wlantapctl' '/system/driver/wlantap.so'
+[00003.673850][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'bt_hci_emulator' '/system/driver/bt-hci-emulator.so'
+[00003.675703][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'gdc' '/system/driver/gdc.so'
+[00003.677506][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'qmi_usb' '/system/driver/qmi-transport.so'
+[00003.679496][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'usb_HciTest' '/system/driver/usb-hci-test-driver.so'
+[00003.685698][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'wlan' '/system/driver/wlan.so'
+[00003.689259][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'wlan' '/system/driver/wlanif.so'
+[00003.691389][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'virtual_audio' '/system/driver/virtual_audio_driver.so'
+[00003.693285][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'wlan' '/system/driver/wlanphy.so'
+[00003.695126][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'bt_hci_intel' '/system/driver/bt-hci-intel.so'
+[00003.696555][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'bt_hog' '/system/driver/bt-hog.so'
+[00003.698161][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'rtl88xx' '/system/driver/rtl88xx.so'
+[00003.699924][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'wlanphy_test' '/system/driver/wlanphy-testdev.so'
+[00003.701745][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'ge2d' '/system/driver/ge2d.so'
+[00003.704208][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'imx227' '/system/driver/imx227.so'
+[00003.706136][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'bt_hci_atheros' '/system/driver/bt-hci-atheros.so'
+[00003.707689][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'bt_hci_passthrough' '/system/driver/bt-hci-passthrough.so'
+[00003.710115][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'magma_pdev_gpu' '/system/driver/libmsd_arm_test.so'
+[00003.712645][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'camera_controller' '/system/driver/sherlock-camera-controller.so'
+[00003.714963][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'ath10k_pci' '/system/driver/ath10k.so'
+[00003.717223][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'bt_host' '/system/driver/bt-host.so'
+[00003.720175][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'aml_mipi' '/system/driver/aml_mipicsi.so'
+[00003.724629][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'fake_ot' '/system/driver/fake-ot-radio.so'
+[00003.728652][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'gpu' '/system/driver/libmsd_intel.so'
+[00003.731038][2559][3141][driver_manager.cm] INFO: [coordinator.cc(1403)] Adding system driver 'serial-ppp' '/system/driver/serial-ppp.so'
+[00003.732026][3709][3711][driver_host:sys, device, sys/platform/acpi/serial/uart16550/serial] INFO: [device_controller_connection.cc(131)] Binding driver '/system/driver/serial-ppp.so'
+[00003.732145][3764][3766][driver_host:test, device, proxy] INFO: [device_controller_connection.cc(131)] Binding driver '/system/driver/virtual_audio_driver.so'
+[00003.732203][2559][2561][driver_manager.cm] INFO: [coordinator.cc(1573)] Fallback driver 'usb_composite' is available
+[00003.732215][2559][2561][driver_manager.cm] INFO: [coordinator.cc(1573)] Fallback driver 'intel_disp' is available
+[00003.732224][2559][2561][driver_manager.cm] INFO: [coordinator.cc(1573)] Fallback driver 'serial' is available
+[00003.737020][3764][3766][driver_host:test, device, proxy] INFO: [device_controller_connection.cc(131)] Binding driver '/system/driver/wlantap.so'
+[00003.742446][3709][3711][driver_host:sys, device, sys/platform/acpi/serial/uart16550/serial/ppp] INFO: [device_controller_connection.cc(131)] Binding driver '/boot/driver/network-device.so'
+[00003.742730][3709][3711][driver_host:sys, driver, network] ERROR: [src/connectivity/network/drivers/network-device/network_device.cc(44)] network-device: Bind failed, protocol not available
+[00003.742825][3709][3711][driver_host:sys, device, sys/platform/acpi/serial/uart16550/serial/ppp] ERROR: [src/devices/bin/driver_host/device_controller_connection.cc(173)] Failed to bind driver '/boot/driver/network-device.so': ZX_ERR_NOT_FOUND
+[00003.742846][2559][2561][driver_manager.cm] ERROR: [src/devices/bin/driver_manager/coordinator.cc(1053)] Failed to bind driver 'ppp': ZX_ERR_NOT_FOUND
+[00003.879040][18179][18181][klog] INFO: [00003.879007][18179][18181][appmgr.cm] INFO: [component_id_index.cc(223)] Found 23 entries in component instance ID index.
+[00003.904177][18179][18181][klog] INFO: [00003.904170][18179][18181][appmgr.cm] INFO: [log_connector_impl.cc(81)] taking log connector for app
+[00003.904258][18179][18181][appmgr] INFO: [log_connector_impl.cc(62)] Successfully set up syslog
+[00003.904594][1949][1951][archivist, archivist] INFO: Connecting to service fuchsia.diagnostics.internal.DetectController 
+[00003.904630][1949][1951][archivist, archivist] INFO: Connecting to service fuchsia.diagnostics.internal.LogStatsController 
+[00003.904637][1949][1951][archivist, archivist] INFO: Connecting to service fuchsia.diagnostics.internal.SamplerController 
+[00003.946478][17923][17925][system-update-committer] INFO: starting system-update-committer
+[00004.076327][17923][17925][system-update-committer] INFO: no config found, using defaults: No such file or directory (os error 2)
+[00004.091666][20405][20407][klog] INFO: [shutdown-shim]: started
+[00004.117820][21107][21109][klog] INFO: vc: started
+[00004.118277][21107][21109][klog] INFO: vc: new input device /dev/class/input-report/000
+[00004.118329][21107][21109][klog] INFO: vc: new display device /dev/class/display-controller/000
+[00004.118713][6184][6186][driver_host:composite-device, driver, display_controller] INFO: [controller.cc(890)] vc client connecting on channel (c=0x530f, s=0x5310)
+[00004.120235][21107][21109][klog] INFO: vc: new input device /dev/class/input-report/001
+[00004.120935][20234][20236][klog] INFO: paver:[QueryBootConfig] Kernel cmdline param zvb.current_slot not found!
+[00004.120948][20234][20236][klog] INFO: paver:[Bind] Failed to get ABR client: ZX_ERR_NOT_SUPPORTED
+[00004.121549][3709][4480][driver_host:sys, driver, sysmem] INFO: [contiguous_pooled_memory_allocator.cc(490)] SysmemContiguousPool high_water_mark_used_size_: 4104192 bytes, max_free_size_at_high_water_mark_ 210579456 bytes (not including any failed allocations)
+[00004.126608][21107][21109][klog] INFO: vc: Successfully attached to display 1
+[00004.154218][21593][21595][pkg-resolver] INFO: starting package resolver
+[00004.190936][17923][17925][system-update-committer] INFO: ABR not supported: skipping health verification and boot metadata updates
+[00004.190974][17923][17925][system-update-committer] INFO: metadata is in happy state!
+[00004.197790][19308][19310][log-stats, log_stats] INFO: Maintaining. 
+[00004.264279][19273][19275][detect, detect] INFO: Checking every 120 seconds from command line 'Some("Minutes(2)")'
+[00004.268020][19273][19275][detect, detect] INFO: Program config file not found; using default config.
+[00004.268119][19273][19275][detect, detect] INFO: Test mode: Production, program config: ProgramConfig { enable_filing: None }
+[00004.365092][22096][22098][cobalt, fidl_service] INFO: [cobalt_main.cc(234)] Cobalt is starting with the following parameters: schedule_interval=3600 seconds, min_interval=10 seconds, initial_interval=60 seconds, upload_jitter=20%, max_bytes_per_observation_store=1048576, event_aggregator_backfill_days=2, start_event_aggregator_worker=1, test_only_use_fake_clock=0.
+[00004.371797][22096][22098][cobalt, fidl_service] INFO: [cobalt_main.cc(262)] Fetched profile!
+[00004.371807][22096][22098][cobalt, fidl_service] INFO: [cobalt_main.cc(265)] Profile aplied to current thread
+[00004.382940][22096][22098][cobalt, fidl_service] INFO: [configuration_data.cc(119)] Loaded Cobalt environment from config file /pkg/data/cobalt_environment: PROD
+[00004.384102][22096][22098][cobalt, fidl_service] INFO: [configuration_data.cc(141)] LookupApiKeyOrDefault: Using default Cobalt API key.
+[00004.385880][22494][22496][pkg-cache] INFO: starting package cache service
+[00004.388262][22096][22098][cobalt, fidl_service] INFO: [configuration_data.cc(171)] Loaded Cobalt release stage from config file: DEBUG
+[00004.388275][22096][22098][cobalt, fidl_service] INFO: [configuration_data.cc(192)] Loaded Cobalt data collection policy from config file: COLLECT_AND_UPLOAD
+[00004.531481][22096][22098][cobalt, fidl_service, core] WARNING: [third_party/cobalt/src/pb/metadata_builder.cc(40)] No system_profile_cache_dir provided to MetadataBuilder. The system profile cache will not be persisted to disk
+[00004.553237][22096][22098][cobalt, fidl_service, core] INFO: [cobalt_service.cc(195)] CobaltService: Switch to DataCollectionPolicy COLLECT_AND_UPLOAD
+[00004.553251][22096][22098][cobalt, fidl_service, core] INFO: [observation_store.cc(73)] ObservationStore: Enabling observation storage.
+[00004.553256][22096][22098][cobalt, fidl_service, core] INFO: [aggregate_store.cc(836)] AggregateStore: Enabling event aggregate storage.
+[00004.553262][22096][22098][cobalt, fidl_service, core] INFO: [local_aggregation.cc(71)] LocalAggregation: Enabling local aggregation.
+[00004.553270][22096][22098][cobalt, fidl_service, core] INFO: [shipping_manager.cc(190)] ClearcutV1ShippingManager: Enabling observation uploading.
+[00004.556465][22096][22098][cobalt, fidl_service] INFO: [cobalt_app.cc(157)] Waiting for the system clock to become accurate at: 2021-02-28 16:55:51 +0000
+[00004.556487][22096][22098][cobalt, fidl_service] INFO: [clock.cc(26)] Checking the state of the system clock
+[00004.592199][23704][23706][activity.cm] INFO: [main.cc(41)] activity-service: Starting service
+[00004.592326][23704][23706][activity.cm] INFO: [activity_provider_connection.cc(38)] activity-service: Registering listener
+[00004.592347][23704][23706][activity.cm] INFO: [activity_provider_connection.cc(57)] activity-service: Obtained observer ID 43077856
+[00005.095655][21593][21595][pkg-resolver] INFO: no statically configured repositories present
+[00005.097008][21593][21595][pkg-resolver] INFO: Unable to load channel from vbmeta: Could not find tuf_repo_config in vbmeta
+[00005.116287][20234][20236][klog] INFO: paver:[InitializeGpt] Unable to find a valid GPT on this device with the expected partitions. Please run *one* of the following command(s):
+[00005.116293][20234][20236][klog] INFO: paver:[InitializeGpt] install-disk-image init-partition-tables --block-device /dev/sys/pci/00:03.0/ahci/sata0/block
+[00005.116304][20234][20236][klog] INFO: paver:[InitializeGpt] install-disk-image init-partition-tables --block-device /dev/sys/pci/00:03.0/ahci/sata0/block/fvm/blobfs-p-1/block
+[00005.116306][20234][20236][klog] INFO: paver:[InitializeGpt] install-disk-image init-partition-tables --block-device /dev/sys/pci/00:03.0/ahci/sata0/block/fvm/minfs-p-2/block
+[00005.116308][20234][20236][klog] INFO: paver:[InitializeGpt] install-disk-image init-partition-tables --block-device /dev/sys/pci/00:03.0/ahci/sata0/block/fvm/internal-p-3/block
+[00005.116311][20234][20236][klog] INFO: paver:[InitializeGpt] install-disk-image init-partition-tables --block-device /dev/sys/pci/00:03.0/ahci/sata0/block/fvm/minfs-p-2/block/zxcrypt/unsealed/block
+[00005.553495][19273][19275][detect, detect] INFO: Loaded and parsed .triage files
+[00006.116874][20234][20236][klog] INFO: paver:[Initialize] Successfully initialized FixedDevicePartitioner Device Partitioner
+[00006.116909][20234][20236][klog] INFO: paver:[FindPartition] Unsupported partition <Unknown Partition>
+[00006.116911][20234][20236][klog] INFO: paver:[Bind] Unable to find sysconfig-data partition. ZX_ERR_NOT_SUPPORTED
+[00006.117089][21593][21595][pkg-resolver] INFO: Unable to load channel from sysconfig: Sysconfig Call Error: SysconfigFidl(ClientChannelClosed { status: Status(NOT_SUPPORTED), service_name: "(anonymous) Sysconfig" })
+[00006.117127][21593][21595][pkg-resolver] INFO: No ota channel present, so not creating rewrite rule.
+[00006.147795][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/mdns/0 to 9f51115828c08b6e770ec18fdcb3bbd03b9d1115d9682b398c9a7c3ad17bb036 with base pin
+[00006.147912][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/system-updater/0 to 68faa729d3fe1c8c4fee693e7999910d3591668f6ed8ed4db355821f7453961e with base pin
+[00006.148004][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/forensics/0 to 9e2ab41051b7a32ea95f4ccb17c48b0b8031dd8acf2ecfb725ff68136c4d493c with base pin
+[00006.148151][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/memory_monitor/0 as fuchsia-pkg://fuchsia.com/memory_monitor/0 to e725030cbdb26010059c6a05d9eb8c6fcadb02b444a4f47e1e83d7f070142ae4 with cache_packages due to the repository manager does not have a repository config for: fuchsia-pkg://fuchsia.com
+[00006.148264][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/system-update-checker/0 to 54d9f5ed0072a96a2aa1d972cf7c06e861fe1cc5035fd26aa9b5f257f9d2ba38 with base pin
+[00006.148351][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/wlancfg/0 to e05c59e74bfd26e829a400603456644098e9751642c328cc18e1ca8e109ade5e with base pin
+[00006.148489][21593][21595][pkg-resolver] WARNING: error resolving fuchsia-pkg://fuchsia.com/lowpan-spinel-driver/0 as fuchsia-pkg://fuchsia.com/lowpan-spinel-driver/0: the repository manager does not have a repository config for: fuchsia-pkg://fuchsia.com
+[00006.148598][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/netcfg/0 to eac946864e80965083faba823cdbf77c9e95b2459383f474548481163e6c2c3e with base pin
+[00006.148689][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/cobalt_system_metrics/0 to 43a3ae5029998b382fd85ac61704312f1b08b5f8a80ab4cdea254c9f860262f4 with base pin
+[00006.148778][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/sshd-host/0 to 0858abbc6ab166aede2c5e5ffb125268503a4777800e4fac4f71fd4451343569 with base pin
+[00006.148867][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/reachability/0 to 92c8de5dcc8d38cbbaa29966361eae2aebed6d5a5f2da9ec929d43ee552b411a with base pin
+[00006.148952][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/thermd/0 to 30021f2c6c70986839f766f9c99016493018e32c5fba28525f9e0635a95f2274 with base pin
+[00006.149032][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/timekeeper/0 to d971feb939c6ca38c6ee190618690c3325eec84acd6f15d99a406a02e663a1f2 with base pin
+[00006.149152][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/trace_manager/0 as fuchsia-pkg://fuchsia.com/trace_manager/0 to 176fe85d6dbe0adad822e92e081d697f5a56420e68f33e1c4715ee4daa203506 with cache_packages due to the repository manager does not have a repository config for: fuchsia-pkg://fuchsia.com
+[00006.149257][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/session_manager to 825e50094c1b75de96f03146aa1f2895bb4281a1fa4445c91daa839439679c31 with base pin
+[00006.201326][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/session_manager to 825e50094c1b75de96f03146aa1f2895bb4281a1fa4445c91daa839439679c31 with base pin
+[00006.357779][27618][27620][session_manager] INFO: Launching session: fuchsia-pkg://fuchsia.com/workstation_session#meta/workstation_session.cm
+[00006.401131][1123171103][0][netstack] INFO: main.go(211): starting... 
+[00006.416360][29248][29250][sshd-host.cmx] INFO: [service.cc(65)] Provisioning keys from boot item: bootloader file not found: ssh.authorized_keys
+[00006.425080][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/workstation_session as fuchsia-pkg://fuchsia.com/workstation_session to 10b10837967fc55a93bd928e99aee2b7fe287690ac525e9426554fd02a963140 with cache_packages due to the repository manager does not have a repository config for: fuchsia-pkg://fuchsia.com
+[00006.498530][28387][30789][memory_monitor] INFO: [pressure_observer.cc(131)] Memory pressure level changed from UNSET to NORMAL
+[00006.498849][28387][28389][memory_monitor] INFO: [main.cc(39)] CANNOT collect memory bandwidth measurements.
+[00006.500213][27618][27620][session_manager] INFO: Received startup request.
+[00006.500923][22096][22098][klog] ERROR: ERROR: [fidling/gen/sdk/fidl/fuchsia.cobalt/fuchsia.cobalt/fuchsia/cobalt/cpp/fidl.cc(5125)] fidl decoding error: message tried to access too large of a bounded string. message: fuchsia.cobalt/LoggerLogElapsedTimeRequest, 12
+[00006.500926][22096][22098][klog] INFO: 8 bytes, 0 handles
+[00006.542624][29813][29815][trace_manager.cmx] INFO: [main.cc(36)] Trace Manager starting with config: /pkg/data/tracing.config
+[00006.580948][29020][29022][cobalt, system_metrics] INFO: [system_metrics_main.cc(30)] System metrics daemon created.
+[00006.582476][23704][23706][activity.cm] INFO: [activity_provider_connection.cc(38)] activity-service: Registering listener
+[00006.582508][23704][23706][activity.cm] INFO: [activity_provider_connection.cc(57)] activity-service: Obtained observer ID 1192799318
+[00006.584858][27242][27244][system-updater] INFO: starting system updater
+[00006.587607][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/cpuperf_provider/0 as fuchsia-pkg://fuchsia.com/cpuperf_provider/0 to 6f426bc0536a0230acf9b466c7cdb5afd50373695e070daf1c1899fb3ce389af with cache_packages due to the repository manager does not have a repository config for: fuchsia-pkg://fuchsia.com
+[00006.587764][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/ktrace_provider/0 as fuchsia-pkg://fuchsia.com/ktrace_provider/0 to 021c12e0ee3753725c8a18f7350943b58ed3e526670d5860dfd942618f11ea09 with cache_packages due to the repository manager does not have a repository config for: fuchsia-pkg://fuchsia.com
+[00006.597891][27686][27688][forensics, reboot] INFO: [reboot_log.cc(102)] No reboot reason found, assuming cold boot
+[00006.600111][27686][27688][forensics, reboot] INFO: [reboot_log.cc(281)] Reboot info:
+GRACEFUL REBOOT REASON (FDR)
+[00006.622168][29397][29399][reachability, reachability] INFO: Starting reachability monitor!
+[00006.706529][28387][28389][memory_monitor] INFO: [metrics.cc(124)] ContiguousPool: 200.8M Blobfs: 75.9M ZBI Buffer: 69.3M Pkgfs: 10.3M Minfs: 10.2M Archivist: 6.7M BlobfsInactive: 4.8M Netstack: 4.8M Cobalt: 3.1M Fshost: 1.1M Web: 0B Kronk: 0B Scenic: 0B Amlogic: 0B Flutter: 0B FlutterApps: 0B Cast: 0B ProtectedPool: 0B Graphics: 0B Audio: 0B Context: 0B Undigested: 65.6M Orphaned: 37.6M Kernel: 91.6M Free: 3.4G [Addl]PagerTotal: 60.1M [Addl]PagerNewest: 60.1M [Addl]PagerOldest: 0B 
+[00006.709240][28880][28882][netcfg] INFO: starting
+[00006.719396][27420][27422][forensics, feedback] WARNING: [src/developer/forensics/feedback_data/system_log_recorder/reader.cc(177)] No previous boot logs found
+[00006.743095][31248][31250][cpuperf_provider.cmx] INFO: [main.cc(21)] Exiting, perfmon device not supported
+[00006.756490][27420][27422][forensics, feedback] INFO: [device_id_provider.cc(82)] Created new feedback device id
+[00006.764667][29692][29694][time, timekeeper] INFO: retrieving UTC clock handle
+[00006.776596][27420][27422][forensics, feedback] WARNING: [src/developer/forensics/feedback_data/attachments/static_attachments.cc(44)] Failed to build attachment build.snapshot.xml
+[00006.776742][27420][27422][forensics, feedback] WARNING: [src/developer/forensics/feedback_data/attachments/static_attachments.cc(44)] Failed to build attachment log.system.previous_boot.txt
+[00006.778814][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/hwinfo/0 to 9052c4c6018699a8a50c414b0c34a400137c64933654ef2865fe53d86cae5dc4 with base pin
+[00006.820575][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/wlanstack/0 to 00c79a689b9e37fb877d9b942451a60219374751b411b5e5f2e3709b520798b1 with base pin
+[00006.823454][30651][30653][stash] INFO: store file doesn't exist, using empty store
+[00006.824272][29692][29694][time, timekeeper] INFO: constructing time sources
+[00006.824285][29692][29694][time, timekeeper] INFO: initializing diagnostics and serving inspect on servicefs
+[00006.845685][28589][31840][system-update-checker] INFO: no config found, using defaults: No such file or directory (os error 2)
+[00006.856150][27242][27244][system-updater] WARNING: Could not load update history: error reading '/data/update_history.json': read call failed: A FIDL client's channel to the service (anonymous) File was closed: PEER_CLOSED: read call failed: A FIDL client's channel to the service (anonymous) File was closed: PEER_CLOSED: A FIDL client's channel to the service (anonymous) File was closed: PEER_CLOSED: PEER_CLOSED
+[00006.875374][29397][29399][reachability, reachability] INFO: monitoring
+[00006.884524][18179][18181][appmgr] WARNING: [src/sys/appmgr/service_provider_dir_impl.cc(140)] `app#sys#fuchsia-pkg://fuchsia.com/reachability#meta/reachability.cmx` is not allowed to connect to `fuchsia.net.name.LookupAdmin` because this service is not present in the component's sandbox.
+Refer to https://fuchsia.dev/fuchsia-src/concepts/framework/sandboxing#services for more information.
+[00006.916162][29692][29694][time, timekeeper] INFO: connecting to real time clock
+[00006.961503][20234][20236][klog] INFO: paver:[InitializeGpt] Unable to find a valid GPT on this device with the expected partitions. Please run *one* of the following command(s):
+[00006.961510][20234][20236][klog] INFO: paver:[InitializeGpt] install-disk-image init-partition-tables --block-device /dev/sys/pci/00:03.0/ahci/sata0/block
+[00006.961512][20234][20236][klog] INFO: paver:[InitializeGpt] install-disk-image init-partition-tables --block-device /dev/sys/pci/00:03.0/ahci/sata0/block/fvm/blobfs-p-1/block
+[00006.961514][20234][20236][klog] INFO: paver:[InitializeGpt] install-disk-image init-partition-tables --block-device /dev/sys/pci/00:03.0/ahci/sata0/block/fvm/minfs-p-2/block
+[00006.961520][20234][20236][klog] INFO: paver:[InitializeGpt] install-disk-image init-partition-tables --block-device /dev/sys/pci/00:03.0/ahci/sata0/block/fvm/internal-p-3/block
+[00006.961523][20234][20236][klog] INFO: paver:[InitializeGpt] install-disk-image init-partition-tables --block-device /dev/sys/pci/00:03.0/ahci/sata0/block/fvm/minfs-p-2/block/zxcrypt/unsealed/block
+[00006.968216][29692][29694][time, timekeeper] INFO: record the state at initialization.
+[00006.968234][29692][29694][time, timekeeper] INFO: reading initial RTC time.
+[00006.968836][29692][29694][time, timekeeper] INFO: started UTC clock from RTC at time: 2021-04-26 00:04:08 UTC
+[00006.968844][29692][29694][time, timekeeper] INFO: launching time source managers...
+[00006.968847][29692][29694][time, timekeeper] INFO: launching clock managers...
+[00006.968880][29692][29694][time, timekeeper::time_source] INFO: Launching PushTimeSource at fuchsia-pkg://fuchsia.com/httpsdate-time-source#meta/httpsdate_time_source.cmx
+[00006.969635][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/httpsdate-time-source/0 to 719af78ff5b14309fc67ba4842a2e8f4e4b2d538e7ae60f19fe654f4f26630c6 with base pin
+[00006.970636][22096][22098][cobalt, fidl_service] INFO: [clock.cc(36)] Clock has been initialized
+[00006.970672][22096][22098][cobalt, fidl_service] INFO: [cobalt_app.cc(161)] The system clock has become accurate, now at: 2021-04-26 00:04:08 +0000
+[00006.974452][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/ermine/0 as fuchsia-pkg://fuchsia.com/ermine/0 to 8bd7dfc8a96ea3647b0e9292df006e3015ab9cc7fb8f7d0e70ba982c130aba86 with cache_packages due to the repository manager does not have a repository config for: fuchsia-pkg://fuchsia.com
+[00006.988791][18179][18181][appmgr] WARNING: [src/sys/appmgr/realm.cc(1247)] Component fuchsia-pkg://fuchsia.com/ermine#meta/ermine.cmx is using isolated-persistent-storage, but is not listed in the component instance ID index.
+[00006.990995][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/flutter_jit_runner/0 to 9b37941282f0ebe865f7f6ff411014c5bd879ad9267b9a2ec7e1c6f4ef8c4072 with base pin
+[00006.991276][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/scenic/0 as fuchsia-pkg://fuchsia.com/scenic/0 to a3ba139a93a088711a1e3be8ae239669133c7eeeeb5d53bd8cdfdb3b354b4e09 with cache_packages due to the repository manager does not have a repository config for: fuchsia-pkg://fuchsia.com
+[00007.001489][32152][32154][hwinfo] INFO: Initiating Hwinfo Server...
+[00007.020182][22096][22098][cobalt, fidl_service, core] INFO: [observation_generator.cc(46)] Starting ObservationGenerator Worker Thread
+[00007.020374][22096][33505][cobalt, fidl_service, core] INFO: [observation_generator.cc(64)] ObservationGenerator Worker Thread running
+[00007.035549][18179][18181][appmgr] WARNING: [src/sys/appmgr/service_provider_dir_impl.cc(145)] `app#sys#fuchsia-pkg://fuchsia.com/hwinfo#meta/hwinfo.cmx` could not connect to `fuchsia.factory.MiscFactoryStoreProvider` because this service is not present in the component's environment or additional services.
+[00007.064616][32152][32154][hwinfo] ERROR: [src/hwinfo/src/config.rs(65)] Failed to read factory file serial.txt: A FIDL client encountered an IO error writing a request into a channel: PEER_CLOSED
+[00007.076383][32152][32154][hwinfo] ERROR: [src/hwinfo/src/config.rs(258)] Failed to load hw.txt.txt due to A FIDL client encountered an IO error writing a request into a channel: PEER_CLOSED
+[00007.076414][32152][32154][hwinfo] ERROR: [src/hwinfo/src/config.rs(261)] Failed to load local_list.txt due to A FIDL client encountered an IO error writing a request into a channel: PEER_CLOSED
+[00007.077568][1123171103][0][netstack, ndp] INFO: ndp.go(488): starting worker goroutine... 
+[00007.080152][28732][28734][klog] INFO: wlancfg::config_management::config_manager [I]: Attempting to migrate saved networks from legacy implementation to stash
+[00007.115922][1123171103][0][netstack, ndp] INFO: ndp.go(499): started worker goroutine 
+[00007.140477][32756][32758][dhcpv6_client] INFO: starting
+[00007.149056][1123171103][0][netstack] INFO: netstack.go(1124): NIC lo added 
+[00007.151986][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/regulatory_region/0 to 2fabb5cdc99edb4b7de4b990fc3c15b5df62c00f00c128728cbf3e2b5a9e4e74 with base pin
+[00007.169912][1123171103][0][netstack] INFO: netstack.go(890): NIC lo: set adminUp=true interfacesChanged=true 
+[00007.169970][1123171103][0][netstack, ndp] INFO: ndp.go(546): DAD resolved for ::1 on nicID (1), sending interface changed event... 
+[00007.188698][1123171103][0][netstack] INFO: main.go(595): starting cobalt client 
+[00007.250833][32604][32606][dns, dns_resolver] INFO: starting
+[00007.265887][32389][32391][klog] INFO: wlanstack [I]: Starting
+[00007.295118][32389][32391][klog] INFO: wlanstack [I]: ServiceCfg { wep_supported: false, wpa1_supported: false, isolated_devmgr: false }
+[00007.334995][28732][28734][klog] INFO: wlancfg::regulatory_manager [I]: No cached regulatory region is available.
+[00007.335034][28732][28734][klog] INFO: wlancfg [I]: Regulatory region has been set.  Proceeding to serve policy API.
+[00007.471663][28880][28882][netcfg] INFO: found new ethdev at /dev/class/ethernet/000
+[00007.477022][28880][28882][netcfg] INFO: ethdev /dev/class/ethernet/000 has topological path @/dev/sys/pci/00:05.0/virtio-net/ethernet
+[00007.486809][28880][28882][netcfg] INFO: adding ethdev at /dev/class/ethernet/000 to stack with name = ethp0005
+[00007.491570][1123171103][0][netstack, eth] WARNING: client.go(116): ErrNotSupported: ConfigMulticastSetPromiscuousMode 
+[00007.503999][1123171103][0][netstack] INFO: netstack.go(1124): NIC ethp0005 added 
+[00007.504185][28880][28882][netcfg] INFO: discovered host interface with id=2, configuring interface
+[00007.504201][28880][28882][netcfg] INFO: disable filter for nic 2
+[00007.504651][29397][29399][reachability, reachability_core] INFO: report_system_updated IPv6 NetworkInfo { is_default: false, is_l3: false, state: StateEvent { state: Down, time: Time(Time(7504607013)) }, previous_state: StateEvent { state: None, time: Time(Time(6875179514)) } }
+[00007.504740][29397][29399][reachability, reachability_core] INFO: report_system_updated IPv4 NetworkInfo { is_default: false, is_l3: false, state: StateEvent { state: Down, time: Time(Time(7504606785)) }, previous_state: StateEvent { state: None, time: Time(Time(6875179317)) } }
+[00007.504798][29397][29399][reachability, reachability_core] INFO: report_updated PortId(2): IPv4 NetworkInfo { is_default: false, is_l3: false, state: StateEvent { state: Down, time: Time(Time(7504606785)) }, previous_state: StateEvent { state: None, time: Time(Time(7504606972)) } }
+[00007.504998][29397][29399][reachability, reachability_core] INFO: report_updated PortId(2): IPv6 NetworkInfo { is_default: false, is_l3: false, state: StateEvent { state: Down, time: Time(Time(7504607013)) }, previous_state: StateEvent { state: None, time: Time(Time(7504607072)) } }
+[00007.513208][1123171103][0][netstack] INFO: netstack.go(890): NIC ethp0005: set adminUp=true interfacesChanged=false 
+[00007.513912][1123171103][0][netstack, eth] INFO: client.go(277): fuchsia.hardware.ethernet.Device.GetStatus() = Online 
+[00007.514051][1123171103][0][netstack] INFO: netstack.go(731): NIC ethp0005: run DHCP 
+[00007.514064][1123171103][0][netstack] INFO: netstack.go(856): NIC ethp0005: observed linkOnline=true interfacesChanged=true 
+[00007.514075][1123171103][0][netstack, ndp] INFO: ndp.go(603): added an auto-generated address (fe80::dbfd:57b9:f14b:819/64) on nicID (2) 
+[00007.514729][29397][29399][reachability, reachability_core] INFO: report_system_updated IPv4 NetworkInfo { is_default: false, is_l3: false, state: StateEvent { state: LinkLayerUp, time: Time(Time(7514696785)) }, previous_state: StateEvent { state: Down, time: Time(Time(7504606785)) } }
+[00007.514806][29397][29399][reachability, reachability_core] INFO: report_system_updated IPv6 NetworkInfo { is_default: false, is_l3: false, state: StateEvent { state: LinkLayerUp, time: Time(Time(7514697496)) }, previous_state: StateEvent { state: Down, time: Time(Time(7504607013)) } }
+[00007.514861][29397][29399][reachability, reachability_core] INFO: report_updated PortId(2): IPv4 NetworkInfo { is_default: false, is_l3: false, state: StateEvent { state: LinkLayerUp, time: Time(Time(7514696785)) }, previous_state: StateEvent { state: Down, time: Time(Time(7504606785)) } }
+[00007.514913][29397][29399][reachability, reachability_core] INFO: report_updated PortId(2): IPv6 NetworkInfo { is_default: false, is_l3: false, state: StateEvent { state: LinkLayerUp, time: Time(Time(7514697496)) }, previous_state: StateEvent { state: Down, time: Time(Time(7504607013)) } }
+[00007.526517][1123171103][0][netstack, DHCP] INFO: client.go(703): ethp0005: send dhcpDISCOVER from :68 to 255.255.255.255:67 on NIC:2 (bcast=false ciaddr=false) 
+[00007.541755][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/sysmem_connector/0 to fe1ee19e8e7fe0ba0ca9f09a329dd7afdac1fd590444a157aa114b3d96fb750a with base pin
+[00007.590492][34975][35132][klog] INFO: sysmem-connector: sysmem_connector.cmx connected to sysmem driver 000
+[00007.608632][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/vulkan_loader/0 to a93ab74e8300db39f98ec2b4ef09acccce8034c23ae3134430dc0b28451fc9c8 with base pin
+[00007.638198][35305][35307][vulkan_loader.cmx] INFO: [main.cc(71)] Vulkan loader initialized.
+[00007.639124][33177][33179][time, httpsdate_time_source::httpsdate] INFO: Waiting for network to become available.
+[00007.657252][29692][29694][time, timekeeper::time_source_manager] INFO: Primary changed state to Initializing
+[00007.929089][33476][36175][io.flutter.runner.jit] INFO: [component.cc(368)] Successfully loaded runner configuration: {
+  "vsync_offset_in_us" : 13200,
+  "use_legacy_renderer": true,
+  "intercept_all_input" : false
+}
+
+[00007.962787][20234][20236][klog] INFO: paver:[Initialize] Successfully initialized FixedDevicePartitioner Device Partitioner
+[00007.962796][20234][20236][klog] INFO: paver:[FindPartition] Unsupported partition <Unknown Partition>
+[00007.962799][20234][20236][klog] INFO: paver:[Bind] Unable to find sysconfig-data partition. ZX_ERR_NOT_SUPPORTED
+[00007.962950][28589][31840][system-update-checker] ERROR: [src/sys/pkg/bin/system-update-checker/src/main.rs(62)] while updating the target channel: Sysconfig Call Error: SysconfigFidl(ClientChannelClosed { status: Status(NOT_SUPPORTED), service_name: "(anonymous) Sysconfig" })
+[00007.963132][28589][31840][system-update-checker] ERROR: [src/sys/pkg/bin/system-update-checker/src/channel.rs(44)] Error reading current_channel, defaulting to the empty string. This is expected before the first OTA. io error: No such file or directory (os error 2)
+[00007.974272][28589][31840][system-update-checker] INFO: calling cobalt.SetSoftwareDistributionInfo("SoftwareDistributionInfo { current_channel: Some(""), current_realm: None, unknown_data: None, __non_exhaustive: () }")
+[00007.974488][22096][22098][cobalt, fidl_service] INFO: [system_data_updater_impl.cc(96)] Setting channel to ``
+[00008.135157][33661][33663][scenic] INFO: [vulkan_device_queues.cc(240)] Using physical device: SwiftShader Device (LLVM 10.0.0)  (apiVersion: 1.1.0 driverVersion: 5.0.0)
+[00008.140471][33661][33663][scenic] INFO: [vulkan_device_queues.cc(265)] Protected memory is not supported.
+[00008.171539][33661][33663][scenic] INFO: [hardware_display_controller_provider_impl.cc(45)] Found display controller at path: /dev/class/display-controller/000.
+[00008.171682][6184][6186][driver_host:composite-device, driver, display_controller] INFO: [controller.cc(890)] dc client connecting on channel (c=0x8824, s=0x8823)
+[00008.245413][33661][33663][scenic] INFO: [input_system.cc(227)] Scenic input system initialized.
+[00008.254914][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/ime_service/0 to 92a0ecca16b935dbf75a7082ecb1a7faf214c56de1bb82c6894f7154a5ae0b92 with base pin
+[00008.255033][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/shortcut/0 to 75825bd70daaf996b414dbd8eed556aeab865c69b04eb4023635aa98e2b7928f with base pin
+[00008.282244][33661][33663][scenic] INFO: [validate_eventpair.cc(59)] ViewRefControl is LOOSE.
+[00008.302523][33661][33663][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (43) type (1) tiling (1) usage (18) flags (0) not supported by physical device
+[00008.348152][33661][33663][scenic] INFO: [sampler.cc(62)] The Vulkan physical device doesn't support linear filter on YCbCr images. Set YCbCr chroma filter to eNearest as a fallback.
+[00008.348162][33661][33663][scenic] INFO: [sampler.cc(70)] The Vulkan physical device cannot use separated reconstruction filters for non-YUV images. Set non-YUV filters to eNearest.
+[00008.369274][33661][33663][scenic] INFO: [sampler.cc(62)] The Vulkan physical device doesn't support linear filter on YCbCr images. Set YCbCr chroma filter to eNearest as a fallback.
+[00008.369284][33661][33663][scenic] INFO: [sampler.cc(70)] The Vulkan physical device cannot use separated reconstruction filters for non-YUV images. Set non-YUV filters to eNearest.
+[00008.381610][33661][33663][scenic] INFO: [descriptor_set_allocator.cc(78)] Allocating immutable descriptor set layout, sampler = 0x1a000000001a
+[00008.387491][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/ime_service/0 to 92a0ecca16b935dbf75a7082ecb1a7faf214c56de1bb82c6894f7154a5ae0b92 with base pin
+[00008.395840][33661][33663][scenic] INFO: [descriptor_set_allocator.cc(78)] Allocating immutable descriptor set layout, sampler = 0x1c000000001c
+[00008.445746][33661][33663][scenic] INFO: [default_frame_scheduler.cc(212)] Calling RenderFrame target_presentation_time=8291090960 frame_number=1
+[00008.445788][33661][33663][scenic] INFO: [default_frame_scheduler.cc(330)] DefaultFrameScheduler::OnFramePresented frame_number=1
+[00008.458010][33661][33663][scenic] INFO: [default_frame_scheduler.cc(212)] Calling RenderFrame target_presentation_time=8474424286 frame_number=2
+[00008.458037][33661][33663][scenic] INFO: [default_frame_scheduler.cc(330)] DefaultFrameScheduler::OnFramePresented frame_number=2
+[00008.482619][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/timezone/0 to 0b35025f315b43323112c6c9496c465e113ab8f02fae9c39e9f22d4fa743e5ea with base pin
+[00008.520064][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/a11y-manager/0 to 974ad5089a0cee2d033be2e24a46f23dba23e672c22b274c563540ae98b57e8b with base pin
+[00008.522023][33476][36175][io.flutter.runner.jit] INFO: [vsync_waiter.cc(61)] Set vsync_offset to 13200us
+[00008.530045][1123171103][0][netstack, ndp] INFO: ndp.go(546): DAD resolved for fe80::dbfd:57b9:f14b:819 on nicID (2), sending interface changed event... 
+[00008.534420][26870][26872][klog] INFO: Starting mDNS on interface ethp0005 fe80::dbfd:57b9:f14b:819 using port 5353
+[00008.534690][29397][29399][reachability, reachability_core] INFO: report_system_updated IPv6 NetworkInfo { is_default: false, is_l3: true, state: StateEvent { state: Local, time: Time(Time(8534658857)) }, previous_state: StateEvent { state: LinkLayerUp, time: Time(Time(7514697496)) } }
+[00008.534794][29397][29399][reachability, reachability_core] INFO: report_updated PortId(2): IPv6 NetworkInfo { is_default: false, is_l3: true, state: StateEvent { state: Local, time: Time(Time(8534658857)) }, previous_state: StateEvent { state: LinkLayerUp, time: Time(Time(7514697496)) } }
+[00008.537375][28880][28882][netcfg] INFO: started DHCPv6 client on host interface ethp0005 (id=2) w/ sockaddr [fe80::dbfd:57b9:f14b:819%2]:546
+[00008.551109][1123171103][0][netstack] INFO: socket_conv.go(905): unimplemented setsockopt(SOL_IPV6,IPV6_UNICAST_HOPS,255) 
+[00008.551243][26870][26872][mdns] WARNING: [src/connectivity/network/mdns/service/mdns_interface_transceiver_v6.cc(81)] fxbug.dev/41357: IPV6_UNICAST_HOPS not supported (ENOPROTOOPT), continuing anyway
+[00008.551321][1123171103][0][netstack] INFO: socket_conv.go(905): unimplemented setsockopt(SOL_IPV6,IPV6_HOPLIMIT,1) 
+[00008.551350][26870][26872][mdns] WARNING: [src/connectivity/network/mdns/service/mdns_interface_transceiver_v6.cc(115)] fxbug.dev/41358: IPV6_HOPLIMIT not supported (ENOPROTOOPT), continuing anyway
+[00008.551964][26870][26872][klog] INFO: mDNS: Verifying uniqueness of host name fuchsia-5254-0063-5e7a.local.
+[00008.577791][33476][36175][io.flutter.runner.jit] WARNING: [flutter/shell/platform/fuchsia/flutter/engine.cc(408)] Requesting intl Profile
+[00008.578650][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/intl_services/0 to 18e96e670209e2ff81471328f7f36c7015489ac46f56d892844e6df5c29650e1 with base pin
+[00008.705567][39595][39597][intl_services] INFO: [run.cc(31)] Started.
+[00008.709739][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/setui_service/0 to e1408ed32772fa9f09590dda728ac8e4f2e1b05e49b4b038dc001cb2f24ddcda with base pin
+[00008.762461][1179][1289][font_provider] WARNING: No capability available at path /svc/fuchsia.tracing.provider.Registry for component /core:0/font_provider:0, verify the component has the proper `use` declaration.
+[00008.848192][21593][21595][pkg-resolver] WARNING: error resolving fuchsia-pkg://fuchsia.com/root_presenter/0 as fuchsia-pkg://fuchsia.com/root_presenter/0: the repository manager does not have a repository config for: fuchsia-pkg://fuchsia.com
+[00008.848843][19465][19467][sysmgr.cmx] ERROR: [src/sys/sysmgr/app.cc(181)] Could not load package for service fuchsia.ui.input.accessibility.PointerEventRegistry at fuchsia-pkg://fuchsia.com/root_presenter#meta/root_presenter.cmx
+[00008.848881][19465][19467][sysmgr.cmx] ERROR: [src/sys/sysmgr/app.cc(187)] Singleton component fuchsia-pkg://fuchsia.com/root_presenter#meta/root_presenter.cmx died
+[00008.865568][39214][39216][a11y-manager.cmx] ERROR: [src/ui/a11y/bin/a11y_manager/app.cc(51)] Error from fuchsia::ui::input::accessibility::PointerEventRegistryZX_ERR_PEER_CLOSED
+[00008.865607][39214][39216][a11y-manager.cmx] ERROR: [src/ui/a11y/bin/a11y_manager/app.cc(58)] Error from fuchsia::ui::views::accessibility::FocuserRegistryZX_ERR_PEER_CLOSED
+[00008.954757][40092][40094][setui-service] INFO: Starting setui-service...
+[00009.031693][40092][40094][setui-service] INFO: unable to open /config/data/service_configuration.json, using defaults: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+[00009.033054][40092][40094][setui-service] INFO: unable to open /config/data/policy_configuration.json, using defaults: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+[00009.035270][40092][40094][setui-service] INFO: unable to open /config/data/service_flags.json, using defaults: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+[00009.037072][40092][40094][setui-service] INFO: unable to open /config/data/agent_configuration.json, using defaults: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+[00009.042156][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/stash/0 to d9aef9060af93da58e3bf19e59fe2cf6ce193923dc14f605be92c9cacb09faf9 with base pin
+[00009.050713][40791][40793][stash] INFO: store file doesn't exist, using empty store
+[00009.220338][33476][38858][klog] INFO: ermine.cmx(flutter): Observatory listening on http://127.0.0.1:56648/
+[00009.223692][33476][38858][klog] INFO: ermine.cmx(flutter): Creating /tmp/dart.services/56648
+[00009.377929][26870][26872][klog] INFO: mDNS: Using unique host name fuchsia-5254-0063-5e7a.local.
+[00009.383693][1123171103][0][netstack, NUD] INFO: fuchsia_net_neighbor.go(84): ADD fe80::1cc7:abff:fe43:cc12 (v6|L) NIC=2 LinkAddress=1e:c7:ab:43:cc:12 Stale 
+[00009.384983][1123171103][0][netstack, NUD] INFO: fuchsia_net_neighbor.go(84): MOD fe80::1cc7:abff:fe43:cc12 (v6|L) NIC=2 LinkAddress=1e:c7:ab:43:cc:12 Delay 
+[00009.387367][1123171103][0][netstack, NUD] INFO: fuchsia_net_neighbor.go(84): MOD fe80::1cc7:abff:fe43:cc12 (v6|L) NIC=2 LinkAddress=1e:c7:ab:43:cc:12 Reachable 
+[00009.662397][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/amberctl/0 to 5de54ed27a9661a8db47c7a59428ea9bfc5ec3853ad9ec7a6c5f13ce196eacf4 with base pin
+[00009.738076][21593][21595][pkg-resolver] INFO: inserting repository Some("fuchsia-pkg://google3_devhost")
+[00009.743752][21593][21595][pkg-resolver] INFO: opening rewrite transaction
+[00009.756789][21593][21595][pkg-resolver] INFO: rewrite transaction committed
+[00009.837346][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("8bcc00bc3575eea5fb608dea6a521845d4f287d2fa80baa40a902f1f3ec7911e") was not found in the set of authorized keys.
+[00009.854176][21593][21595][pkg-resolver] INFO: AutoClient for "http://[fe80::1cc7:abff:fe43:cc12%25ethp0005]:37320/auto" connecting.
+[00009.858244][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("8bcc00bc3575eea5fb608dea6a521845d4f287d2fa80baa40a902f1f3ec7911e") was not found in the set of authorized keys.
+[00009.870920][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("8bcc00bc3575eea5fb608dea6a521845d4f287d2fa80baa40a902f1f3ec7911e") was not found in the set of authorized keys.
+[00009.872973][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("8bcc00bc3575eea5fb608dea6a521845d4f287d2fa80baa40a902f1f3ec7911e") was not found in the set of authorized keys.
+[00009.878813][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("8bcc00bc3575eea5fb608dea6a521845d4f287d2fa80baa40a902f1f3ec7911e") was not found in the set of authorized keys.
+[00009.884275][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("8bcc00bc3575eea5fb608dea6a521845d4f287d2fa80baa40a902f1f3ec7911e") was not found in the set of authorized keys.
+[00009.886047][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("8bcc00bc3575eea5fb608dea6a521845d4f287d2fa80baa40a902f1f3ec7911e") was not found in the set of authorized keys.
+[00009.904816][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("5aae753f96e546dfed596460c6fb476f0860d8982814c3a09a74158805534e3f") was not found in the set of authorized keys.
+[00010.011030][33476][36175][io.flutter.runner.jit] WARNING: [flutter/shell/platform/fuchsia/flutter/engine.cc(416)] fuchsia.intl.PropertyProvider: OnChange
+[00010.073248][33476][36175][io.flutter.runner.jit] WARNING: [flutter/shell/platform/fuchsia/flutter/engine.cc(403)] Sending LocalizationPlatformMessage
+[00010.160660][0][1079][klog] INFO: memory-pressure: memory availability state - Normal
+[00010.215716][21593][21595][pkg-resolver] INFO: updated local TUF metadata for "fuchsia-pkg://google3_devhost" to version RepoVersions { root: 7, timestamp: Some(1619395433), snapshot: Some(1619395433), targets: Some(1619395433) } while getting merkle for TargetPath("cat/0")
+[00010.231812][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/cat/0 as fuchsia-pkg://google3_devhost/cat/0 to 5c7346e8b333da18a367647dbc4bfa4823bd7aecc61b0e1e6d811ab1e709e4ef with TUF
+[00010.858240][33476][36175][io.flutter.runner.jit] INFO: [platform_view.cc(617)] Platform view received message on channel 'flutter/isolate' with no registered handler. And empty response will be generated. Please implement the native message handler. This message will appear only once per channel.
+[00010.918372][1123171103][0][netstack, DHCP] WARNING: client.go(498): ethp0005: recv timeout waiting for dhcpOFFER; retransmitting dhcpDISCOVER 
+[00010.918459][1123171103][0][netstack, DHCP] INFO: client.go(703): ethp0005: send dhcpDISCOVER from :68 to 255.255.255.255:67 on NIC:2 (bcast=false ciaddr=false) 
+[00010.939816][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/audio_core/0 to 1b9bccf2bd650450743153cae64e1650ad19b13d04919f202a2f45abf068f582 with base pin
+[00010.941513][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/bt-init/0 to b6b3631b73e734be9d2550a188dc6bc6bc1f044d4bdf85c7afe9ab5dcd5f5997 with base pin
+[00010.957439][18179][18181][appmgr] WARNING: [src/sys/appmgr/realm.cc(1247)] Component fuchsia-pkg://fuchsia.com/audio_core#meta/audio_core.cmx is using isolated-persistent-storage, but is not listed in the component instance ID index.
+[00011.010751][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/component_index/0 to cf03a1f7f1b8975f8d8d7f31fe2dfd6a84830954431215b20325854554dcd835 with base pin
+[00011.012157][39214][39216][a11y-manager.cmx] ERROR: [src/ui/a11y/bin/a11y_manager/app.cc(71)] Error from fuchsia::ui::focus::FocusChainListenerRegistryZX_ERR_PEER_CLOSED
+[00011.048919][45203][45205][bt-init, bt_init] INFO: Starting bt-init...
+[00011.081061][44744][44746][brightness] INFO: Started
+[00011.084250][45203][45205][bt-init, bt_init] INFO: Starting snoop service...
+[00011.085021][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/bt-snoop/0 to 2783f5c2836acbe3a5f275965a63386f5be24d082a5f55ccaf707735d5146f89 with base pin
+[00011.093941][45203][45205][bt-init, bt_init] INFO: Snoop service started successfully
+[00011.093950][45203][45205][bt-init, bt_init] INFO: Launching BT-GAP service...
+[00011.096628][44969][44971][battery_manager] INFO: starting up
+[00011.098482][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/bt-gap/0 to 5ebc5f94bcf22065bf9949a8f57df937b7fa8ebcd472cd3b922b308a1ca5a938 with base pin
+[00011.098680][44744][44746][brightness] INFO: Opening backlight
+[00011.099342][44744][44746][brightness] INFO: Opening sensor at "/dev/class/input/000"
+[00011.101322][45203][45205][bt-init, bt_init] INFO: BT-GAP launched successfully
+[00011.101340][45203][45205][bt-init, bt_init] INFO: Configuring BT-GAP
+[00011.101413][45203][45205][bt-init, bt_init] INFO: BT-GAP configuration sent successfully
+[00011.107000][44744][44746][brightness] INFO: Opening sensor at "/dev/class/input/001"
+[00011.107661][44744][44746][brightness] INFO: Opening sensor at "/dev/class/input/002"
+[00011.108236][44744][44746][brightness] INFO: Opening sensor at "/dev/class/input/003"
+[00011.108702][44744][44746][brightness] INFO: Opening sensor at "/dev/class/input/004"
+[00011.108959][45203][45205][bt-init, bt_init] INFO: Initialization complete, begin serving FIDL protocols
+[00011.109739][44744][44746][brightness] INFO: New Control class
+[00011.111671][44744][44746][brightness] WARNING: Error occurred when trying to read existing settings: No such file or directory (os error 2), using default table instead.
+[00011.141008][45203][45205][bt-init, bt_init] INFO: Passing fuchsia.bluetooth.control.Control Handle to bt-gap
+[00011.142824][45069][45071][audio_core.cmx] INFO: [filter.cc(221)] CreateSincFilterTable took 3895535 ns with Inputs { side_width=114687, num_frac_bits=13, rate_conversion_ratio=1 }
+[00011.144076][44744][44746][brightness] INFO: New brightness server
+[00011.144116][44744][44746][brightness] WARNING: Didn't get the initial brightness in watch due to err A FIDL client's channel to the service (anonymous) Device was closed: PEER_CLOSED, assuming 1.0.
+[00011.144244][44744][44746][brightness] WARNING: Failed to get backlight: A FIDL client's channel to the service (anonymous) Device was closed: PEER_CLOSED. assuming 1.0
+[00011.150860][45069][45071][audio_core.cmx] INFO: [filter.cc(221)] CreateSincFilterTable took 7978416 ns with Inputs { side_width=229375, num_frac_bits=13, rate_conversion_ratio=0.5 }
+[00011.154117][45069][45071][audio_core.cmx] INFO: [filter.cc(221)] CreateSincFilterTable took 3227384 ns with Inputs { side_width=114687, num_frac_bits=13, rate_conversion_ratio=2 }
+[00011.173924][44969][44971][battery_manager] INFO: watch_power_device event for file: "/dev/class/power/"
+[00011.174389][45069][45071][audio_core.cmx] INFO: [filter.cc(221)] CreateSincFilterTable took 20222917 ns with Inputs { side_width=688127, num_frac_bits=13, rate_conversion_ratio=0.166667 }
+[00011.175269][44969][44971][battery_manager] WARNING: Failed to add watch event for '"/dev/class/power/"': other os error
+[00011.177865][45069][45071][audio_core.cmx] INFO: [filter.cc(221)] CreateSincFilterTable took 3432957 ns with Inputs { side_width=114687, num_frac_bits=13, rate_conversion_ratio=1.08844 }
+[00011.233553][45069][45071][audio_core] INFO: [main.cc(34)] AudioCore starting up
+[00011.264716][45724][45726][bt-snoop, bt_snoop] INFO: Starting bt-snoop.
+[00011.312315][45724][45726][bt-snoop, bt_snoop] INFO: New client connection: 0
+[00011.326895][45992][45995][bt-gap, bt_gap] INFO: Starting bt-gap...
+[00011.326956][45992][45995][bt-gap, bt_gap] INFO: Initializing bt-gap...
+[00011.347779][45992][45995][bt-gap, bt_gap] INFO: Initializing data store from Stash...
+[00011.424162][45992][45995][bt-gap, bt_gap] INFO: Data store initialized successfully
+[00011.424172][45992][45995][bt-gap, bt_gap] INFO: Obtaining system host name...
+[00011.434712][45992][45995][bt-gap, bt_gap] INFO: System host name obtained successfully.
+[00011.453928][45992][45995][bt-gap, bt_gap] INFO: Launching bt-rfcomm component...
+[00011.509862][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/bt-rfcomm/0 to 2ee053971d04913f90d8effb279f438c42a4d173530a72a06bfc24dc69f11807 with base pin
+[00011.562369][45069][45071][audio_core] INFO: [pin_executable_memory.cc(115)] pinned 7659520 bytes (5771264 executable bytes) in 325238058 ns
+[00011.562660][45069][45071][audio_core] WARNING: [src/media/audio/audio_core/main.cc(45)] Failed to load /config/data/audio_core_config.json: File does not exist. Falling back to default configuration.
+[00011.563041][45069][45071][audio_core] INFO: [policy_loader.cc(241)] No policy found; using default.
+[00011.574919][45069][45071][audio_core] INFO: [pin_executable_memory.cc(115)] pinned 7667712 bytes (5779456 executable bytes) in 269406 ns
+[00011.575165][45069][45071][audio_core] INFO: [policy_loader.cc(241)] No policy found; using default.
+[00011.575178][45069][45071][audio_core] INFO: [thermal_agent.cc(103)] No thermal config found, so we won't start the thermal agent
+[00011.576594][45069][45071][audio_core] INFO: [audio_device_manager.cc(458)] Adding output '000'
+[00011.577227][45069][45071][audio_core] INFO: [audio_device_manager.cc(458)] Adding input '000'
+[00011.579545][45069][47164][audio_core] INFO: [pin_executable_memory.cc(115)] pinned 7659520 bytes (5771264 executable bytes) in 135495 ns
+[00011.580457][45069][45071][audio_core] INFO: [audio_device_manager.cc(400)] Plugged output '000'
+[00011.581405][45069][45071][audio_core] INFO: [audio_device_manager.cc(429)] Default output '000'
+[00011.581433][45069][45071][audio_core] INFO: [audio_device_manager.cc(400)] Plugged input '000'
+[00011.581503][45069][45071][audio_core] INFO: [audio_device_manager.cc(429)] Default input '000'
+[00011.685650][45992][45995][bt-gap, bt_gap] INFO: Connecting Profile Service to Host Device
+[00011.766365][45992][45995][bt-gap, bt_gap] INFO: Successfully launched bt-rfcomm
+[00011.766375][45992][45995][bt-gap, bt_gap] INFO: bt-gap successfully initialized.
+[00011.775352][45992][45995][bt-gap, bt_gap] INFO: Spawning Control Service
+[00011.778560][45992][45995][bt-gap, bt_gap] INFO: Spawning Control Service
+[00011.844270][3][839086079][ermine, localizations_delegate.dart(27)] INFO: _LocalizationsDelegate: current default locale: en_US-u-ca-gregory-fw-sun-hc-h12-ms-ussystem-nu-latn-tz-utc
+[00012.443215][33476][36175][io.flutter.runner.jit] INFO: [platform_view.cc(617)] Platform view received message on channel 'flutter/navigation' with no registered handler. And empty response will be generated. Please implement the native message handler. This message will appear only once per channel.
+[00013.074480][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00013.393274][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00013.460583][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00013.850279][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00014.567916][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/http-client/0 to f73b04f375f97970013a380b360dd6f33b9b190d59de956e7af301e877e7944a with base pin
+[00014.866412][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 10.11 ms, overran goal of 10 ms; thread spent 10109571 ns on CPU, 0 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00014.866439][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=159756 last_mix_job_length=488
+[00014.906957][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 10.03 ms, overran goal of 10 ms; thread spent 5343496 ns on CPU, 4683896 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00014.906973][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=161710 last_mix_job_length=485
+[00014.914559][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00015.187448][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00015.448500][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/amberctl/0 to 5de54ed27a9661a8db47c7a59428ea9bfc5ec3853ad9ec7a6c5f13ce196eacf4 with base pin
+[00015.468582][21593][21595][pkg-resolver] INFO: inserting repository Some("fuchsia-pkg://devhost")
+[00015.470500][21593][21595][pkg-resolver] INFO: opening rewrite transaction
+[00015.472567][21593][21595][pkg-resolver] INFO: rewrite transaction committed
+[00015.707932][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00016.690685][45992][45995][bt-gap, bt_gap::host_dispatcher] INFO: No bt-host devices found
+[00016.690751][45992][45995][klog] INFO: Failed to spawn, no active host
+[00016.740878][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00017.973678][1123171103][0][netstack, DHCP] WARNING: client.go(498): ethp0005: recv timeout waiting for dhcpOFFER; retransmitting dhcpDISCOVER 
+[00017.973760][1123171103][0][netstack, DHCP] INFO: client.go(703): ethp0005: send dhcpDISCOVER from :68 to 255.255.255.255:67 on NIC:2 (bcast=false ciaddr=false) 
+[00018.768136][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00018.785143][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00019.052955][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00019.589207][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00020.622419][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00022.311082][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/log_listener_shell/0 to 1a13e5b3c6bdcbca00e6b67ffbb7fc21fa5f877b4ecc1b748f5d35ee52843b28 with base pin
+[00022.689516][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00022.763640][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00023.059983][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00023.590739][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00024.657216][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00026.236990][45069][46299][audio_core] INFO: [pin_executable_memory.cc(115)] pinned 7692288 bytes (5779456 executable bytes) in 585463 ns
+[00026.691210][48287][48289][http_client] INFO: Received network level error from hyper: error trying to connect: NameProvider.LookupIp failure: Transient
+[00026.786604][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("8bcc00bc3575eea5fb608dea6a521845d4f287d2fa80baa40a902f1f3ec7911e") was not found in the set of authorized keys.
+[00026.788518][21593][21595][pkg-resolver] INFO: AutoClient for "http://[fe80::1cc7:abff:fe43:cc12%25ethp0005]:8083/auto" connecting.
+[00026.800979][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("8bcc00bc3575eea5fb608dea6a521845d4f287d2fa80baa40a902f1f3ec7911e") was not found in the set of authorized keys.
+[00026.808337][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("8bcc00bc3575eea5fb608dea6a521845d4f287d2fa80baa40a902f1f3ec7911e") was not found in the set of authorized keys.
+[00026.810056][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("8bcc00bc3575eea5fb608dea6a521845d4f287d2fa80baa40a902f1f3ec7911e") was not found in the set of authorized keys.
+[00026.824303][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("8bcc00bc3575eea5fb608dea6a521845d4f287d2fa80baa40a902f1f3ec7911e") was not found in the set of authorized keys.
+[00026.838603][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("5aae753f96e546dfed596460c6fb476f0860d8982814c3a09a74158805534e3f") was not found in the set of authorized keys.
+[00026.848153][21593][21595][pkg-resolver, tuf::verify] WARNING: Key ID KeyId("33efe3720e278de9ac57c810c1be71b9ef4dd49c0951edd9a2f9a39af08b5776") was not found in the set of authorized keys.
+[00027.236900][21593][21595][pkg-resolver] INFO: updated local TUF metadata for "fuchsia-pkg://devhost" to version RepoVersions { root: 7, timestamp: Some(1619395433), snapshot: Some(1619395433), targets: Some(1619395433) } while getting merkle for TargetPath("run/0")
+[00027.254284][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/run/0 as fuchsia-pkg://devhost/run/0 to 6c2788372a16b2409cddb2a7e737e24db801b27e7c779acfd3c4d291cf4f95aa with TUF
+[00027.433276][21593][21595][pkg-resolver] INFO: Fetching blobs for fuchsia-pkg://devhost/resource-monitor/0: {
+    96ef155f7cb6feeda98df17bf22a73ffd07a04332137d8527e5c215b5e787a98,
+    570e3b3348926136f5ee4964fd821ebbb3fe9a81d43762d83d483f1c2ebd3202,
+    66c6b09c0d046f3550761677a8ee38feccac80249bae7a5f4f8527827ebfc7cf,
+    1e40b993244646d04ae862e9ccefe424066f96b95b84aea67981081bd9540ba4,
+    72a69967403ee210779ede59b4e02e476c3bc8c8f09032b8307a2cffecf1f3c2,
+    8046112cd2b2dadf089b81c008e60f7e85138855584ed600aa2c2e423cc8dd11,
+    4c94f6219628446bd9c94f32510b11e555c45a49afbf21acf58e209f7ac1f281,
+    b1b3dc9038865926699a47b0820b01457f80f4ef67deba64bd290fc1552d6ed6,
+    c0c148ac04240c9f20696e40ca096033d86292a99667c1cd7fefb9e0ac92b6a0,
+    c6afdc217142f74b45e1778a688deb103c16dbd4b9cb4e694ea63dd10a3f4022,
+    387220c1bd6552982ba7c6ffd1f0246c8eaf957987978aa69130c0adb0fb3637,
+}
+[00027.592286][11215][13363][klog] INFO: pkgsvr: cached resource-monitor/0 (d57e9e9600f4df32379009fcac49a286130d358a2ec4b2e4268e51fa1022a692)
+[00027.594263][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/resource-monitor/0 as fuchsia-pkg://devhost/resource-monitor/0 to d57e9e9600f4df32379009fcac49a286130d358a2ec4b2e4268e51fa1022a692 with TUF
+[00027.612211][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/dart_jit_runner/0 to 14ce60a78282c0427e4abc452353bdd84e3f2414b69998331449d7f810d14b22 with base pin
+[00027.876677][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 10.05 ms, overran goal of 10 ms; thread spent 44629 ns on CPU, 0 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00027.876703][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=784213 last_mix_job_length=483
+[00028.385457][53975][54315][dart_jit_runner.cmx, dart-runner] INFO: [dart_component_controller.cc(144)] fuchsia-pkg://fuchsia.com/resource-monitor#meta/resource_monitor_server.cmx is running from kernel
+[00028.426405][53975][54302][klog] INFO: Observatory listening on http://127.0.0.1:33112/
+[00028.465951][53975][54302][klog] INFO: Observatory listening on http://127.0.0.1:33112/
+[00028.470138][53975][54302][klog] INFO: Creating /tmp/dart.services/33112
+[00028.470207][53975][54302][klog] INFO: Creating /tmp/dart.services/33112
+[00034.376551][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 10.56 ms, overran goal of 10 ms; thread spent 6179032 ns on CPU, 4373270 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00034.376577][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=1096117 last_mix_job_length=591
+[00034.473617][1123171103][0][netstack, DHCP] WARNING: client.go(498): ethp0005: recv timeout waiting for dhcpOFFER; retransmitting dhcpDISCOVER 
+[00034.473712][1123171103][0][netstack, DHCP] INFO: client.go(703): ethp0005: send dhcpDISCOVER from :68 to 255.255.255.255:67 on NIC:2 (bcast=false ciaddr=false) 
+[00035.037523][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00035.853864][19273][19275][detect, triage::act] WARNING: Snapshot trigger was missing: Non-numeric operand: Vector([]) not numeric
+[00035.929860][19273][19275][detect, triage::act] WARNING: Snapshot trigger was missing: Non-numeric operand: Vector([]) not numeric
+[00035.996567][19273][19275][detect, triage::act] WARNING: Snapshot trigger was missing: Non-numeric operand: Vector([]) not numeric
+[00036.060954][19273][19275][detect, triage::act] WARNING: Snapshot trigger was missing: Non-numeric operand: Vector([]) not numeric
+[00036.134294][19273][19275][detect, triage::act] WARNING: Snapshot trigger was missing: Non-numeric operand: Vector([]) not numeric
+[00036.156319][19273][19275][detect, triage::act] WARNING: Snapshot trigger was missing: Non-numeric operand: Non-numeric operand: No component found matching selector omaha-client-service.cmx:root/platform_metrics/installation_error_events/children/*:ts
+[00036.363666][19273][19275][detect, triage::act] WARNING: Snapshot trigger was missing: Non-numeric operand: Vector([]) not numeric
+[00037.606023][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 11.08 ms, overran goal of 10 ms; thread spent 64594 ns on CPU, 0 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00037.606049][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=1251193 last_mix_job_length=505
+[00040.652462][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00047.629137][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00050.146475][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00055.303701][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 37.19 ms, overran goal of 10 ms; thread spent 37184504 ns on CPU, 0 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00055.303731][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=2099424 last_mix_job_length=508
+[00055.572391][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/run/0 as fuchsia-pkg://devhost/run/0 to 6c2788372a16b2409cddb2a7e737e24db801b27e7c779acfd3c4d291cf4f95aa with TUF
+[00055.620766][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/resource-monitor/0 as fuchsia-pkg://devhost/resource-monitor/0 to d57e9e9600f4df32379009fcac49a286130d358a2ec4b2e4268e51fa1022a692 with TUF
+[00055.772289][53975][56304][dart_jit_runner.cmx, dart-runner] INFO: [dart_component_controller.cc(144)] fuchsia-pkg://fuchsia.com/resource-monitor#meta/resource_monitor_client.cmx is running from kernel
+[00055.900290][53975][56304][klog] INFO: Dart Unhandled Exception: IncomingStateException: The directory must be bound before trying to connect to a service. See [Incoming.request] for more information, stack trace: #0      Incoming.connectToServiceByNameWithChanne
+[00055.900294][53975][56304][klog] INFO: l (package:fuchsia_services/src/incoming.dart:119:7)
+[00055.900295][53975][56304][klog] INFO: #1      Incoming.connectToService (package:fuchsia_services/src/incoming.dart:95:5)
+[00055.900295][53975][56304][klog] INFO: #2      _run (package:resource_monitor_client/main.dart:46:12)
+[00055.900295][53975][56304][klog] INFO: <asynchronous suspension>
+[00055.900296][53975][56304][klog] INFO: 
+[00055.911312][28589][31840][system-update-checker] WARNING: error getting current channel: io error: No such file or directory (os error 2)
+[00055.918999][28179][28181][forensics, crash, resource_monitor_client, 0] INFO: [crash_reporter.cc(214)] Generating report
+[00055.939515][21593][21595][pkg-resolver] INFO: resolved fuchsia-pkg://fuchsia.com/resource-monitor/0 as fuchsia-pkg://devhost/resource-monitor/0 to d57e9e9600f4df32379009fcac49a286130d358a2ec4b2e4268e51fa1022a692 with TUF
+[00056.013666][53975][56597][dart_jit_runner.cmx, dart-runner] INFO: [dart_component_controller.cc(144)] fuchsia-pkg://fuchsia.com/resource-monitor#meta/resource_monitor_server.cmx is running from kernel
+[00061.578231][28179][28181][forensics, crash, resource_monitor_client, 0] INFO: [queue.cc(141)] Archiving local report under /tmp/reports
+[00065.606583][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 10.28 ms, overran goal of 10 ms; thread spent 6055974 ns on CPU, 4217672 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00065.606610][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=2595151 last_mix_job_length=612
+[00067.299457][1123171103][0][netstack, DHCP] WARNING: client.go(498): ethp0005: recv timeout waiting for dhcpOFFER; retransmitting dhcpDISCOVER 
+[00067.299530][1123171103][0][netstack, DHCP] INFO: client.go(703): ethp0005: send dhcpDISCOVER from :68 to 255.255.255.255:67 on NIC:2 (bcast=false ciaddr=false) 
+[00067.526561][1123171103][0][netstack, DHCP] INFO: client.go(277): ethp0005: recv dhcpOFFER: read: context deadline exceeded; retrying initSelecting 
+[00067.526636][1123171103][0][netstack, DHCP] INFO: client.go(331): ethp0005: scheduling renewal in 1s 
+[00068.211159][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 10.04 ms, overran goal of 10 ms; thread spent 4414500 ns on CPU, 5618297 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00068.211193][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=2720313 last_mix_job_length=482
+[00068.527309][1123171103][0][netstack, DHCP] INFO: client.go(703): ethp0005: send dhcpDISCOVER from :68 to 255.255.255.255:67 on NIC:2 (bcast=false ciaddr=false) 
+[00072.170333][1123171103][0][netstack, DHCP] WARNING: client.go(498): ethp0005: recv timeout waiting for dhcpOFFER; retransmitting dhcpDISCOVER 
+[00072.170381][1123171103][0][netstack, DHCP] INFO: client.go(703): ethp0005: send dhcpDISCOVER from :68 to 255.255.255.255:67 on NIC:2 (bcast=false ciaddr=false) 
+[00072.235800][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 10.05 ms, overran goal of 10 ms; thread spent 7446605 ns on CPU, 2562890 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00072.235836][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=2913493 last_mix_job_length=484
+[00076.319336][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 24.23 ms, overran goal of 10 ms; thread spent 24145110 ns on CPU, 26800 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00076.319436][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=3108811 last_mix_job_length=490
+[00079.177116][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00080.807471][1123171103][0][netstack, DHCP] WARNING: client.go(498): ethp0005: recv timeout waiting for dhcpOFFER; retransmitting dhcpDISCOVER 
+[00080.807535][1123171103][0][netstack, DHCP] INFO: client.go(703): ethp0005: send dhcpDISCOVER from :68 to 255.255.255.255:67 on NIC:2 (bcast=false ciaddr=false) 
+[00082.181540][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00091.232985][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 10.07 ms, overran goal of 10 ms; thread spent 5826415 ns on CPU, 4232574 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00091.233010][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=3825269 last_mix_job_length=572
+[00094.686644][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 12.53 ms, overran goal of 10 ms; thread spent 5078264 ns on CPU, 7435744 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00094.686670][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=3991017 last_mix_job_length=482
+[00096.377373][1123171103][0][netstack, DHCP] WARNING: client.go(498): ethp0005: recv timeout waiting for dhcpOFFER; retransmitting dhcpDISCOVER 
+[00096.377453][1123171103][0][netstack, DHCP] INFO: client.go(703): ethp0005: send dhcpDISCOVER from :68 to 255.255.255.255:67 on NIC:2 (bcast=false ciaddr=false) 
+[00105.302882][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 11 ms, overran goal of 10 ms; thread spent 8769406 ns on CPU, 2216875 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00105.302914][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=4500670 last_mix_job_length=482
+[00109.231190][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00110.249237][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00110.291376][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 24.83 ms, overran goal of 10 ms; thread spent 14862854 ns on CPU, 5257 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00110.291407][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=4739434 last_mix_job_length=494
+[00112.649903][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00115.662599][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 10.13 ms, overran goal of 10 ms; thread spent 6642145 ns on CPU, 3471216 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00115.662691][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=4997971 last_mix_job_length=483
+[00116.855223][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 11.29 ms, overran goal of 10 ms; thread spent 38286 ns on CPU, 0 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00116.855244][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=5055170 last_mix_job_length=480
+[00117.881682][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 10.05 ms, overran goal of 10 ms; thread spent 5560735 ns on CPU, 4484729 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00117.881708][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=5104192 last_mix_job_length=788
+[00118.705024][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 10.05 ms, overran goal of 10 ms; thread spent 5914632 ns on CPU, 4119813 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00118.705050][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=5144001 last_mix_job_length=498
+[00119.129822][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00121.645829][33476][36840][goldfish_vulkan] WARNING: [third_party/android/device/generic/goldfish-opengl/system/vulkan_enc/ResourceTracker.cpp(2164)] [prio 5] addImageBufferCollectionConstraints: Image format (37) type (1) tiling (1) usage (23) flags (0) not supported by physical device
+[00121.695932][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(139)] PIPELINE UNDERFLOW: Mixer ran for 10.3 ms, overran goal of 10 ms; thread spent 146386 ns on CPU, 0 ns queued; produced 0 frames, advanced 0 frames, made 1 ReadLock calls log_id="pipeline-underflow"
+[00121.696009][45069][47164][audio_core] ERROR: [src/media/audio/audio_core/audio_output.cc(147)] PIPELINE UNDERFLOW advanced zero frames: overall_frame_start=0 overall_frame_end=0 last_buffer_empty=true last_buffer_frame_start=0 last_buffer_frame_end=0 last_mix_job_start=5286797 last_mix_job_length=1245

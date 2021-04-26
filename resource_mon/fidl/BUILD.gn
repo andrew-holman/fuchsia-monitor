@@ -8,7 +8,7 @@ fidl("fidl") {
   # TODO(fxbug.dev/35879): Remove lint exclusions by fixing known FIDL lint violations in this target
   excluded_checks = [ "string-bounds-not-specified" ]
 
-  name = "fidl.examples.routing.backend_monitor"
+  name = "fuchsia.services.examples"
 
   sources = [ "backend_monitor.fidl"]
 }

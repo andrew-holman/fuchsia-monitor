@@ -3,7 +3,7 @@ import("//build/dart/dart_library.gni")
 import("//build/dart/fidl_move.gni")
 
 dart_library("lib") {
-  package_name = "resource_monitor"
+  package_name = "resource_monitor_client"
   sources = [
     "main.dart",
     "src/_resource_monitor_receiver.dart",

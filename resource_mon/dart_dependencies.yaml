@@ -1,0 +1,3 @@
+name: resource_monitor
+  dependencies:
+    system_info: ^1.0.0

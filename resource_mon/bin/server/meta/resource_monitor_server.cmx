@@ -1,6 +1,6 @@
 {
     "program": {
-        "data": "data/resource_monitor_client"
+        "data": "data/resource_monitor_server"
     },
     "sandbox": {
         "services": [
